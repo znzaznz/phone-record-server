@@ -6,4 +6,4 @@ services:
     env_file:
       - .env
     volumes:
-      - /volume1/openclawdata/need-fresh-data:/app/shared/output
+      - ./shared/output:/app/shared/output
