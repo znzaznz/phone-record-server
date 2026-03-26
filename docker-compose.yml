@@ -6,4 +6,4 @@ services:
     env_file:
       - .env
     volumes:
-      - /volume1/openclawdata/need-fresh-data:/app/shared/output
+      - /volume1/openclawdata/need-fresh-data/phone-record-server:/app/shared/output
