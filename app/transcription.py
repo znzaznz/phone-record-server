@@ -4,6 +4,7 @@ import mimetypes
 import os
 import subprocess
 import tempfile
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from uuid import UUID
@@ -175,18 +176,58 @@ def _transcribe_one_file(path: Path, filename_for_api: str) -> str:
     url = f"{base}/audio/transcriptions"
     mime, _ = mimetypes.guess_type(filename_for_api)
     content_type = mime or "application/octet-stream"
-    with path.open("rb") as audio_file:
-        files = {"file": (filename_for_api, audio_file, content_type)}
-        data = {"model": settings.stt_model}
-        with httpx.Client(timeout=httpx.Timeout(600.0, connect=30.0)) as client:
-            r = client.post(
-                url,
-                headers={"Authorization": f"Bearer {settings.stt_api_key}"},
-                files=files,
-                data=data,
-            )
-            r.raise_for_status()
-            body = r.json()
+    max_attempts = 4
+    body: object | None = None
+    for attempt in range(max_attempts):
+        try:
+            with path.open("rb") as audio_file:
+                files = {"file": (filename_for_api, audio_file, content_type)}
+                data = {"model": settings.stt_model}
+                with httpx.Client(timeout=httpx.Timeout(600.0, connect=30.0)) as client:
+                    r = client.post(
+                        url,
+                        headers={"Authorization": f"Bearer {settings.stt_api_key}"},
+                        files=files,
+                        data=data,
+                    )
+                    r.raise_for_status()
+                    body = r.json()
+            break
+        except httpx.HTTPStatusError as e:
+            code = e.response.status_code
+            if (
+                attempt + 1 < max_attempts
+                and code in (429, 500, 502, 503, 504)
+            ):
+                wait = 2**attempt
+                logger.warning(
+                    "STT HTTP %s (attempt %s/%s), retry in %ss: %s",
+                    code,
+                    attempt + 1,
+                    max_attempts,
+                    wait,
+                    url,
+                )
+                time.sleep(wait)
+            else:
+                raise
+        except httpx.RequestError as e:
+            if attempt + 1 < max_attempts:
+                wait = 2**attempt
+                logger.warning(
+                    "STT request error (attempt %s/%s), retry in %ss: %s",
+                    attempt + 1,
+                    max_attempts,
+                    wait,
+                    e,
+                )
+                time.sleep(wait)
+            else:
+                raise
+    else:
+        raise RuntimeError("STT request failed after retries")
+
+    assert body is not None
     try:
         return str(body["text"]).strip()
     except (KeyError, TypeError) as e:
