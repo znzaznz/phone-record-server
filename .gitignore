@@ -1,1 +1,7 @@
 .env
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# 本地自测目录，不提交
+test/
