@@ -1,5 +1,6 @@
 import tempfile
 from pathlib import Path
+from typing import Literal
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -7,10 +8,23 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
+    # siliconflow | dashscope（百炼 Fun-ASR）
+    stt_provider: Literal["siliconflow", "dashscope"] = "siliconflow"
+
     # SiliconFlow STT: https://docs.siliconflow.cn/en/api-reference/audio/create-audio-transcriptions
     stt_api_key: str = ""
     stt_base_url: str = "https://api.siliconflow.cn/v1"
     stt_model: str = "TeleAI/TeleSpeechASR"
+
+    # 阿里云百炼 DashScope（与 SiliconFlow 二选一，见 stt_provider）
+    # Key: https://help.aliyun.com/zh/model-studio/get-api-key
+    dashscope_api_key: str = ""
+    dashscope_base_url: str = "https://dashscope.aliyuncs.com"
+    dashscope_model: str = "fun-asr"
+    dashscope_diarization_enabled: bool = True
+    dashscope_speaker_count: int | None = None
+    dashscope_poll_interval_seconds: float = 2.0
+    dashscope_poll_timeout_seconds: float = 7200.0
     # 0 = upload whole file once; else slice to this many seconds per STT request (needs FFmpeg on PATH).
     stt_chunk_seconds: int = 300
     # If the tail shorter than this (seconds), merge into the previous chunk.

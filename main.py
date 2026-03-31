@@ -8,7 +8,7 @@ from uuid import UUID
 from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
 
 from app.config import settings
-from app.transcription import run_pipeline, validate_audio_filename
+from app.transcription import ALLOWED_SUFFIXES, run_pipeline, validate_audio_filename
 
 logging.basicConfig(level=logging.INFO)
 
@@ -55,7 +55,10 @@ async def transcribe(
     return {
         "task_id": str(task_id),
         "status": "accepted",
-        "message": "Transcription queued; OpenClaw may watch .done under shared output",
+        "message": (
+            f"Transcription queued; output under shared output: {task_id}.md "
+            f"and source audio {task_id}{suffix}"
+        ),
     }
 
 
@@ -66,10 +69,16 @@ def task_status(task_id: str) -> dict[str, str | bool]:
     except ValueError as e:
         raise HTTPException(status_code=400, detail="Invalid task_id") from e
     out = settings.shared_output_dir
-    done = out / f"{tid}.done"
-    data = out / f"{tid}.json"
+    md = out / f"{tid}.md"
+    audio_name: str | None = None
+    for suf in ALLOWED_SUFFIXES:
+        p = out / f"{tid}{suf}"
+        if p.is_file():
+            audio_name = p.name
+            break
     return {
         "task_id": task_id,
-        "done": done.is_file(),
-        "json_ready": data.is_file(),
+        "ready": md.is_file(),
+        "audio_saved": audio_name is not None,
+        "audio_file": audio_name,
     }

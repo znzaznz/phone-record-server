@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import json
 import sys
 import time
 from pathlib import Path
@@ -30,7 +29,7 @@ def main() -> None:
         "--output-dir",
         type=Path,
         default=Path(__file__).resolve().parent.parent / "shared" / "output",
-        help="Where JSON results are written (must match server SHARED_OUTPUT_DIR)",
+        help="Where .md results are written (must match server SHARED_OUTPUT_DIR)",
     )
     parser.add_argument(
         "--poll-interval",
@@ -77,18 +76,27 @@ def main() -> None:
                 s = client.get(f"{base}/tasks/{task_id}")
                 s.raise_for_status()
                 st = s.json()
-                if st.get("json_ready"):
-                    jp = out_dir / f"{task_id}.json"
-                    print("result:", jp)
-                    if jp.is_file():
-                        data = json.loads(jp.read_text(encoding="utf-8"))
-                        preview = (data.get("transcript") or "")[:500]
-                        if len(data.get("transcript") or "") > 500:
+                if st.get("ready"):
+                    mp = out_dir / f"{task_id}.md"
+                    print("result:", mp)
+                    if mp.is_file():
+                        text = mp.read_text(encoding="utf-8")
+                        if "---\n\n" in text:
+                            body = text.split("---\n\n", 1)[-1]
+                        else:
+                            body = text
+                        preview = body[:500]
+                        if len(body) > 500:
                             preview += "…"
                         print("transcript preview:\n", preview)
                     break
-                if st.get("done") and not st.get("json_ready"):
-                    print("done but no json yet; check server logs", file=sys.stderr)
+                if st.get("audio_saved") and not st.get("ready"):
+                    af = st.get("audio_file")
+                    print(
+                        "transcript failed or pending, source audio kept:",
+                        out_dir / af if af else "?",
+                        file=sys.stderr,
+                    )
                     break
                 time.sleep(args.poll_interval)
             else:
