@@ -7,6 +7,7 @@
 from __future__ import annotations
 
 import logging
+import random
 import time
 import uuid
 from pathlib import Path
@@ -17,10 +18,18 @@ import httpx
 logger = logging.getLogger(__name__)
 
 
+class DashScopeTaskFailed(RuntimeError):
+    def __init__(self, code: str, message: str, body: dict[str, Any]) -> None:
+        super().__init__(f"百炼任务失败: code={code}, message={message}, body={body!r}")
+        self.code = code
+        self.message = message
+        self.body = body
+
+
 def _dashscope_api_key(settings: Any) -> str:
-    k = (getattr(settings, "dashscope_api_key", "") or getattr(settings, "stt_api_key", "") or "").strip()
+    k = (getattr(settings, "dashscope_api_key", "") or "").strip()
     if not k:
-        raise RuntimeError("百炼 ASR 需要 DASHSCOPE_API_KEY 或 STT_API_KEY")
+        raise RuntimeError("请设置环境变量 DASHSCOPE_API_KEY（阿里云百炼 API Key）")
     return k
 
 
@@ -129,7 +138,10 @@ def _poll_until_done(
         output = body.get("output") or {}
         status = output.get("task_status", "")
         if status == "FAILED":
-            raise RuntimeError(f"百炼任务失败: {body!r}")
+            first = (output.get("results") or [{}])[0]
+            code = str(first.get("code") or output.get("code") or "TASK_FAILED")
+            message = str(first.get("message") or output.get("message") or "Task failed")
+            raise DashScopeTaskFailed(code=code, message=message, body=body)
         if status == "SUCCEEDED":
             return output
         time.sleep(poll_interval)
@@ -180,18 +192,39 @@ def transcribe_local_file(path: Path, settings: Any) -> str:
     speaker_count = getattr(settings, "dashscope_speaker_count", None)
     poll_iv = float(getattr(settings, "dashscope_poll_interval_seconds", 2.0))
     poll_max = float(getattr(settings, "dashscope_poll_timeout_seconds", 7200.0))
+    retry_attempts = max(1, int(getattr(settings, "dashscope_retry_max_attempts", 3)))
+    retry_base_delay = max(0.1, float(getattr(settings, "dashscope_retry_base_delay_seconds", 5.0)))
+    retryable_codes = {"INSTANCE_POOL_EXHAUSTED"}
 
     with httpx.Client() as client:
         logger.info("百炼: 获取上传凭证 model=%s", model)
         policy = _get_upload_policy(client, api_key, base, model)
         logger.info("百炼: 上传音频 %s", path.name)
         oss_url = _upload_to_instant_oss(client, policy, path)
-        logger.info("百炼: 提交转写任务")
-        task_id = _submit_asr_job(
-            client, api_key, base, model, oss_url, diarization, speaker_count
-        )
-        logger.info("百炼: 轮询 task_id=%s", task_id)
-        output = _poll_until_done(client, api_key, base, task_id, poll_iv, poll_max)
+        output: dict[str, Any] | None = None
+        for attempt in range(1, retry_attempts + 1):
+            logger.info("百炼: 提交转写任务 (attempt %s/%s)", attempt, retry_attempts)
+            task_id = _submit_asr_job(
+                client, api_key, base, model, oss_url, diarization, speaker_count
+            )
+            logger.info("百炼: 轮询 task_id=%s", task_id)
+            try:
+                output = _poll_until_done(client, api_key, base, task_id, poll_iv, poll_max)
+                break
+            except DashScopeTaskFailed as e:
+                if e.code not in retryable_codes or attempt >= retry_attempts:
+                    raise
+                delay = retry_base_delay * (2 ** (attempt - 1)) + random.uniform(0.0, 1.0)
+                logger.warning(
+                    "百炼任务失败 code=%s，%.1fs 后重试 (%s/%s)",
+                    e.code,
+                    delay,
+                    attempt,
+                    retry_attempts,
+                )
+                time.sleep(delay)
+        if output is None:
+            raise RuntimeError("百炼任务重试后仍未得到结果")
         results = output.get("results") or []
         if not results:
             raise RuntimeError(f"百炼无 results: {output!r}")

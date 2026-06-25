@@ -6,6 +6,7 @@ from pathlib import Path
 from uuid import UUID
 
 from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
+from pydantic import BaseModel
 
 from app.config import settings
 from app.transcription import ALLOWED_SUFFIXES, run_pipeline, validate_audio_filename
@@ -62,8 +63,15 @@ async def transcribe(
     }
 
 
-@app.get("/tasks/{task_id}")
-def task_status(task_id: str) -> dict[str, str | bool]:
+class TaskStatusResponse(BaseModel):
+    task_id: str
+    ready: bool
+    audio_saved: bool
+    audio_file: str = ""
+
+
+@app.get("/tasks/{task_id}", response_model=TaskStatusResponse)
+def task_status(task_id: str) -> TaskStatusResponse:
     try:
         tid = UUID(task_id)
     except ValueError as e:
@@ -76,9 +84,9 @@ def task_status(task_id: str) -> dict[str, str | bool]:
         if p.is_file():
             audio_name = p.name
             break
-    return {
-        "task_id": task_id,
-        "ready": md.is_file(),
-        "audio_saved": audio_name is not None,
-        "audio_file": audio_name,
-    }
+    return TaskStatusResponse(
+        task_id=task_id,
+        ready=md.is_file(),
+        audio_saved=audio_name is not None,
+        audio_file=audio_name if audio_name else "",
+    )

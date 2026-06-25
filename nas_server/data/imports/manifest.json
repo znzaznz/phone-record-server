@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-06-22T15:27:03",
+  "tables": {
+    "exam_points": 149,
+    "knowledge_points": 448,
+    "questions": 2797,
+    "lecture_materials": 269
+  },
+  "copied_reports": [
+    "_question_knowledge_point_mapping_report.json",
+    "_github_cpa_economic_law_candidate_mapping.json",
+    "_github_cpa_economic_law_import_report.json",
+    "_ideafinbench_accounting_candidate_mapping.json",
+    "_ideafinbench_financial_management_candidate_mapping.json",
+    "_ideafinbench_accounting_import_report.json",
+    "_ideafinbench_financial_management_import_report.json"
+  ],
+  "note": "SQLite is ignored by git; these files are the portable data snapshot."
+}

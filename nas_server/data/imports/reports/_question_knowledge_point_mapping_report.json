@@ -1,0 +1,2206 @@
+{
+  "mapped": 220,
+  "unmapped": [],
+  "items": [
+    {
+      "id": 221,
+      "source_id": "280619",
+      "question_number": 1,
+      "knowledge_point_id": 3,
+      "chapter": "总论",
+      "exam_point": "法律行为与代理",
+      "knowledge_point": "法律行为制度",
+      "stem": "1.【单选·2023】根据民事法律制度的规定，下列各项中，属于无偿法律行为的是（）。"
+    },
+    {
+      "id": 222,
+      "source_id": "280619",
+      "question_number": 2,
+      "knowledge_point_id": 3,
+      "chapter": "总论",
+      "exam_point": "法律行为与代理",
+      "knowledge_point": "法律行为制度",
+      "stem": "2.【单选·2022】赵某和钱某为确保借款合同的履行，签订了一份房屋抵押合同。根据法律行为的分类属于（）。"
+    },
+    {
+      "id": 223,
+      "source_id": "280619",
+      "question_number": 3,
+      "knowledge_point_id": 3,
+      "chapter": "总论",
+      "exam_point": "法律行为与代理",
+      "knowledge_point": "法律行为制度",
+      "stem": "3.【单选·2021】下列法律行为中，属于附条件法律行为的是（）。"
+    },
+    {
+      "id": 224,
+      "source_id": "280619",
+      "question_number": 4,
+      "knowledge_point_id": 3,
+      "chapter": "总论",
+      "exam_point": "法律行为与代理",
+      "knowledge_point": "法律行为制度",
+      "stem": "4.【单选·2020】根据民事法律制度的规定，下列民事法律行为中，属于附期限法律行为的是（）。"
+    },
+    {
+      "id": 225,
+      "source_id": "280619",
+      "question_number": 5,
+      "knowledge_point_id": 3,
+      "chapter": "总论",
+      "exam_point": "法律行为与代理",
+      "knowledge_point": "法律行为制度",
+      "stem": "5.【单选·2023】根据民事法律制度的规定，下列行为属于可撤销行为的是（）。"
+    },
+    {
+      "id": 226,
+      "source_id": "280619",
+      "question_number": 7,
+      "knowledge_point_id": 4,
+      "chapter": "总论",
+      "exam_point": "法律行为与代理",
+      "knowledge_point": "代理制度",
+      "stem": "7.【多选·2022】下列法律行为中，可以通过代理实施的有（）。"
+    },
+    {
+      "id": 227,
+      "source_id": "280619",
+      "question_number": 8,
+      "knowledge_point_id": 4,
+      "chapter": "总论",
+      "exam_point": "法律行为与代理",
+      "knowledge_point": "代理制度",
+      "stem": "8.【单选·2021】根据民事法律制度的规定，下列关于代理制度的表述中，正确的是（）。"
+    },
+    {
+      "id": 228,
+      "source_id": "280619",
+      "question_number": 9,
+      "knowledge_point_id": 4,
+      "chapter": "总论",
+      "exam_point": "法律行为与代理",
+      "knowledge_point": "代理制度",
+      "stem": "9.【多选·2023】根据民事法律制度的规定，法定代理终止的法定情形有（）。"
+    },
+    {
+      "id": 229,
+      "source_id": "280619",
+      "question_number": 10,
+      "knowledge_point_id": 4,
+      "chapter": "总论",
+      "exam_point": "法律行为与代理",
+      "knowledge_point": "代理制度",
+      "stem": "10.【多选·2025】被代理人死亡后，下列情形中，委托代理人实施的行为仍然有效的有（）。"
+    },
+    {
+      "id": 230,
+      "source_id": "280619",
+      "question_number": 12,
+      "knowledge_point_id": 6,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "仲裁法律制度的规定",
+      "stem": "12.【多选·2018】根据仲裁法律制度的规定，下列各项中属于仲裁基本原则的有（）。"
+    },
+    {
+      "id": 231,
+      "source_id": "280619",
+      "question_number": 13,
+      "knowledge_point_id": 6,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "仲裁法律制度的规定",
+      "stem": "13.【单选·2022】下列纠纷中，可以适用《仲裁法》的是（）。"
+    },
+    {
+      "id": 232,
+      "source_id": "280619",
+      "question_number": 14,
+      "knowledge_point_id": 6,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "仲裁法律制度的规定",
+      "stem": "14.【单选·2025】根据仲裁法律制度的规定，下列关于仲裁协议的表述中，正确的是（）。"
+    },
+    {
+      "id": 233,
+      "source_id": "280619",
+      "question_number": 15,
+      "knowledge_point_id": 6,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "仲裁法律制度的规定",
+      "stem": "15.【多选·2023】根据仲裁法律制度的规定，下列仲裁协议中，无效的有（）。"
+    },
+    {
+      "id": 234,
+      "source_id": "280619",
+      "question_number": 17,
+      "knowledge_point_id": 6,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "仲裁法律制度的规定",
+      "stem": "17.【单选·2019】甲公司与乙公司签订买卖合同，并在合同中约定了仲裁条款，但未选定仲裁机构。关于该仲裁条款效力及适用的下列表述中，正确的是（）。"
+    },
+    {
+      "id": 235,
+      "source_id": "280619",
+      "question_number": 18,
+      "knowledge_point_id": 6,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "仲裁法律制度的规定",
+      "stem": "18.【单选·2023】下列关于仲裁裁决的表述中，正确的是（）。"
+    },
+    {
+      "id": 236,
+      "source_id": "280619",
+      "question_number": 19,
+      "knowledge_point_id": 6,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "仲裁法律制度的规定",
+      "stem": "19.【多选·2021】根据《仲裁法》的规定，仲裁员具有特定情形必须回避。下列情形中，属于该特定情形的有（）。"
+    },
+    {
+      "id": 237,
+      "source_id": "280619",
+      "question_number": 20,
+      "knowledge_point_id": 6,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "仲裁法律制度的规定",
+      "stem": "20.【单选·2023】根据仲裁法律制度规定，当事人一方申请执行仲裁裁决，另一方申请撤销裁决的，人民法院应当首先（）。"
+    },
+    {
+      "id": 238,
+      "source_id": "280619",
+      "question_number": 22,
+      "knowledge_point_id": 7,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "民事诉讼法律制度的规定",
+      "stem": "22.【多选·2025】根据民事诉讼法律制度的规定，下列关于两审终审制度的说法中，正确的有（）。"
+    },
+    {
+      "id": 239,
+      "source_id": "280619",
+      "question_number": 23,
+      "knowledge_point_id": 7,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "民事诉讼法律制度的规定",
+      "stem": "23.【多选·2024】根据民事诉讼法律制度的规定，下列关于民事诉讼管辖的表述，正确的有（）。"
+    },
+    {
+      "id": 240,
+      "source_id": "280619",
+      "question_number": 24,
+      "knowledge_point_id": 7,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "民事诉讼法律制度的规定",
+      "stem": "24.【单选·2020】住所地在甲市M 区的张某，其工作单位在甲市N 区，经常居住地在甲市P 区。2020 年5 月，甲市Q 区的某医院拟起诉张某要求其清偿在该院位于甲市Y 区的分院住院时拖欠的医疗费。对该诉讼有管辖权的人民法院是（）。"
+    },
+    {
+      "id": 241,
+      "source_id": "280619",
+      "question_number": 25,
+      "knowledge_point_id": 7,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "民事诉讼法律制度的规定",
+      "stem": "25.【单选·2024】甲、乙签订房屋租赁合同，双方就房屋租赁合同发生纠纷，甲起诉乙，管辖法院是（）。"
+    },
+    {
+      "id": 242,
+      "source_id": "280619",
+      "question_number": 26,
+      "knowledge_point_id": 7,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "民事诉讼法律制度的规定",
+      "stem": "26.【判断·2024】被告下落不明的民事诉讼案件，适用简易程序。（）"
+    },
+    {
+      "id": 243,
+      "source_id": "280619",
+      "question_number": 27,
+      "knowledge_point_id": 7,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "民事诉讼法律制度的规定",
+      "stem": "27.【单选·2018】根据民事诉讼法律制度的规定，当事人不服地方人民法院第一审裁定的，上诉期限是（）。"
+    },
+    {
+      "id": 244,
+      "source_id": "280619",
+      "question_number": 28,
+      "knowledge_point_id": 7,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "民事诉讼法律制度的规定",
+      "stem": "28.【单选·2022】根据民事诉讼法律制度的规定，下列关于审判监督程序的表述中，正确的是（）。"
+    },
+    {
+      "id": 245,
+      "source_id": "280619",
+      "question_number": 29,
+      "knowledge_point_id": 7,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "民事诉讼法律制度的规定",
+      "stem": "29.【单选·2023】根据民事诉讼法律制度的规定，关于法院调解，下列表述正确的是（）。"
+    },
+    {
+      "id": 246,
+      "source_id": "280619",
+      "question_number": 30,
+      "knowledge_point_id": 7,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "民事诉讼法律制度的规定",
+      "stem": "30.【单选·2016】根据民事诉讼法律制度的规定，下列表述中，不正确的是（）。"
+    },
+    {
+      "id": 247,
+      "source_id": "280619",
+      "question_number": 32,
+      "knowledge_point_id": 7,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "民事诉讼法律制度的规定",
+      "stem": "32.【单选·2018】根据民事法律制度的规定，有关诉讼时效制度，下列表述错误的是（）。"
+    },
+    {
+      "id": 248,
+      "source_id": "280619",
+      "question_number": 33,
+      "knowledge_point_id": 7,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "民事诉讼法律制度的规定",
+      "stem": "33.【单选·2022】根据民事诉讼法律制度的规定，在诉讼时效期间最后6 个月内发生的或存续的下列事由中，能够引起诉讼时效中止的是（）。"
+    },
+    {
+      "id": 249,
+      "source_id": "280619",
+      "question_number": 34,
+      "knowledge_point_id": 7,
+      "chapter": "总论",
+      "exam_point": "经济纠纷解决途径",
+      "knowledge_point": "民事诉讼法律制度的规定",
+      "stem": "34.【多选·2020】根据民事法律制度的规定，下列关于诉讼时效中止的表述中，正确的有（）。"
+    },
+    {
+      "id": 250,
+      "source_id": "138003",
+      "question_number": 1,
+      "knowledge_point_id": 43,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权的概念、种类和效力",
+      "stem": "根据物权法律制度的规定，下列各项中，属于物的是（）。"
+    },
+    {
+      "id": 251,
+      "source_id": "138003",
+      "question_number": 2,
+      "knowledge_point_id": 43,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权的概念、种类和效力",
+      "stem": "权利虽然不属于物，但是可以成为物权的客体（）。"
+    },
+    {
+      "id": 252,
+      "source_id": "138003",
+      "question_number": 3,
+      "knowledge_point_id": 43,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权的概念、种类和效力",
+      "stem": "根据物权法律制度的规定，下列各项中，属于不动产的有（）。"
+    },
+    {
+      "id": 253,
+      "source_id": "138003",
+      "question_number": 4,
+      "knowledge_point_id": 43,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权的概念、种类和效力",
+      "stem": "根据物权法律制度的规定，下列各项中，构成主物与从物关系的是（）。"
+    },
+    {
+      "id": 254,
+      "source_id": "138003",
+      "question_number": 5,
+      "knowledge_point_id": 43,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权的概念、种类和效力",
+      "stem": "根据物权法律制度的规定，下列各项中，属于法定孳息的有（）。"
+    },
+    {
+      "id": 255,
+      "source_id": "138003",
+      "question_number": 6,
+      "knowledge_point_id": 43,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权的概念、种类和效力",
+      "stem": "下列各项中，属于可分物的有（）。"
+    },
+    {
+      "id": 256,
+      "source_id": "138003",
+      "question_number": 9,
+      "knowledge_point_id": 43,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权的概念、种类和效力",
+      "stem": "根据物权法律制度的规定，下列属于用益物权的有（）。"
+    },
+    {
+      "id": 257,
+      "source_id": "138003",
+      "question_number": 10,
+      "knowledge_point_id": 43,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权的概念、种类和效力",
+      "stem": "根据物权法律制度的规定，下列物权客体只能是不动产的是（）。"
+    },
+    {
+      "id": 258,
+      "source_id": "138003",
+      "question_number": 12,
+      "knowledge_point_id": 43,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权的概念、种类和效力",
+      "stem": "小祖将其所有的一副假牙借给其好友小魏。某日，小魏的姐姐小艾偷拿了该副假牙。则下列说法中正确的有（）。"
+    },
+    {
+      "id": 259,
+      "source_id": "138003",
+      "question_number": 15,
+      "knowledge_point_id": 44,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权变动制度",
+      "stem": "下列物权取得方式中，属于原始取得的有（）。"
+    },
+    {
+      "id": 260,
+      "source_id": "138003",
+      "question_number": 17,
+      "knowledge_point_id": 44,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权变动制度",
+      "stem": "根据物权法律制度的规定，下列不动产物权中，无须登记即可生效的有（）。"
+    },
+    {
+      "id": 261,
+      "source_id": "138003",
+      "question_number": 18,
+      "knowledge_point_id": 44,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权变动制度",
+      "stem": "甲公司将一套房屋售予乙公司，双方于2025 年11 月3 日签订买卖合同，并于2025 年11 月4 日办理了不动产转移登记手续。根据物权法律制度的规定，下列表述中，正确的有（）。"
+    },
+    {
+      "id": 262,
+      "source_id": "138003",
+      "question_number": 20,
+      "knowledge_point_id": 44,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权变动制度",
+      "stem": "不动产权属证书记载的事项，应当与不动产登记簿一致，当两者记载不一致时，正确的处理方式为（）。"
+    },
+    {
+      "id": 263,
+      "source_id": "138003",
+      "question_number": 22,
+      "knowledge_point_id": 44,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权变动制度",
+      "stem": "根据物权法律制度的规定，下列关于更正登记与异议登记的表述中，正确的有（）。"
+    },
+    {
+      "id": 264,
+      "source_id": "138003",
+      "question_number": 24,
+      "knowledge_point_id": 44,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权变动制度",
+      "stem": "根据物权法律制度的规定，下列关于预告登记的表述中，正确的有（）。"
+    },
+    {
+      "id": 265,
+      "source_id": "138003",
+      "question_number": 27,
+      "knowledge_point_id": 44,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权变动制度",
+      "stem": "2025 年1 月1 日，甲将自己的电脑出租给乙使用半年。5 月1 日，甲将该电脑卖给丙，并与丙在买卖合同中约定于租期届满时由丙直接向乙请求返还电脑。6 月1 日，乙向丙交付电脑。下列关于本案的表述中，正确的有（）。"
+    },
+    {
+      "id": 266,
+      "source_id": "138003",
+      "question_number": 28,
+      "knowledge_point_id": 44,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权变动制度",
+      "stem": "2025 年5 月10 日，甲借用乙的自行车，双方约定借期1 个月。5 月19 日，甲决定买下该自行车，于是发微信告知乙。5 月20 日，乙回复同意。5 月25 日，甲将自行车款通过微信支付给乙。下列关于本案的表述中，正确的有（）。"
+    },
+    {
+      "id": 267,
+      "source_id": "138003",
+      "question_number": 29,
+      "knowledge_point_id": 44,
+      "chapter": "物权法律制度",
+      "exam_point": "物权法通则",
+      "knowledge_point": "物权变动制度",
+      "stem": "2025 年3 月1 日，钟某将自己的摄像机出售给李某，考虑到摄像机中存在大量的自拍视频，遂与李某在买卖合同中约定继续借用该台摄像机至3 月10 日，以便拷贝视频留档。3 月10 日，钟某如约向李某交付摄像机。下列关于本案的表述中，正确的有（）。"
+    },
+    {
+      "id": 268,
+      "source_id": "138003",
+      "question_number": 30,
+      "knowledge_point_id": 46,
+      "chapter": "物权法律制度",
+      "exam_point": "所有权",
+      "knowledge_point": "所有权取得的规定",
+      "stem": "根据物权法律制度的规定，下列关于拾得遗失物法律效果的表述中，不正确的有（）。第四章"
+    },
+    {
+      "id": 269,
+      "source_id": "138003",
+      "question_number": 32,
+      "knowledge_point_id": 46,
+      "chapter": "物权法律制度",
+      "exam_point": "所有权",
+      "knowledge_point": "所有权取得的规定",
+      "stem": "根据物权法律制度的规定，下列各项中，属于加工的是（）。"
+    },
+    {
+      "id": 270,
+      "source_id": "138003",
+      "question_number": 33,
+      "knowledge_point_id": 46,
+      "chapter": "物权法律制度",
+      "exam_point": "所有权",
+      "knowledge_point": "所有权取得的规定",
+      "stem": "甲误用乙的油漆刷于自家的家具上，双方未就刷完漆的家具的所有权归属达成一致意见。根据物权法律制度的规定，下列有关说法中，正确的是（）。"
+    },
+    {
+      "id": 271,
+      "source_id": "138003",
+      "question_number": 34,
+      "knowledge_point_id": 46,
+      "chapter": "物权法律制度",
+      "exam_point": "所有权",
+      "knowledge_point": "所有权取得的规定",
+      "stem": "下列关于善意取得适用条件的说法中，不符合《民法典》规定的是（）。"
+    },
+    {
+      "id": 272,
+      "source_id": "138003",
+      "question_number": 36,
+      "knowledge_point_id": 47,
+      "chapter": "物权法律制度",
+      "exam_point": "所有权",
+      "knowledge_point": "共有的规定",
+      "stem": "甲、乙、丙、丁四人共有一套房屋，分别持有份额10%、10%、10%、70%。为提高房屋的价值，甲主张将该房屋重新装修，乙、丙表示赞同，但丁反对。根据物权法律制度的规定，下列关于本案是否可以对房屋重新装修的说法中，正确的是（）。"
+    },
+    {
+      "id": 273,
+      "source_id": "138003",
+      "question_number": 37,
+      "knowledge_point_id": 47,
+      "chapter": "物权法律制度",
+      "exam_point": "所有权",
+      "knowledge_point": "共有的规定",
+      "stem": "甲、乙、丙三兄弟共同继承一幅古董字画，由甲保管。甲擅自将该画以市场价出卖于丁并已交付，丁对该画的共有权属关系并不知情。根据物权法律制度的规定，下列表述中，正确的是（）。"
+    },
+    {
+      "id": 274,
+      "source_id": "138003",
+      "question_number": 38,
+      "knowledge_point_id": 47,
+      "chapter": "物权法律制度",
+      "exam_point": "所有权",
+      "knowledge_point": "共有的规定",
+      "stem": "根据物权法律制度的规定，下列关于共有的表述中，正确的是（）。"
+    },
+    {
+      "id": 275,
+      "source_id": "138003",
+      "question_number": 41,
+      "knowledge_point_id": 49,
+      "chapter": "物权法律制度",
+      "exam_point": "用益物权",
+      "knowledge_point": "土地承包经营权的规定",
+      "stem": "下列关于土地承包经营权承包期的表述中，正确的有（）。"
+    },
+    {
+      "id": 276,
+      "source_id": "138003",
+      "question_number": 42,
+      "knowledge_point_id": 49,
+      "chapter": "物权法律制度",
+      "exam_point": "用益物权",
+      "knowledge_point": "土地承包经营权的规定",
+      "stem": "下列关于土地承包经营权和土地经营权的表述中，符合法律规定的有（）。"
+    },
+    {
+      "id": 277,
+      "source_id": "138003",
+      "question_number": 45,
+      "knowledge_point_id": 52,
+      "chapter": "物权法律制度",
+      "exam_point": "用益物权",
+      "knowledge_point": "居住权的规定",
+      "stem": "下列有关居住权的说法中，不正确的是（）。"
+    },
+    {
+      "id": 278,
+      "source_id": "138003",
+      "question_number": 48,
+      "knowledge_point_id": 54,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "担保物权的规定",
+      "stem": "以下担保方式中，属于约定产生的有（）。"
+    },
+    {
+      "id": 279,
+      "source_id": "138003",
+      "question_number": 49,
+      "knowledge_point_id": 54,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "担保物权的规定",
+      "stem": "反担保人可以是债务人，也可以是债务人以外的第三人，下列反担保方式中，只能由第三人提供的是（）。"
+    },
+    {
+      "id": 280,
+      "source_id": "138003",
+      "question_number": 52,
+      "knowledge_point_id": 54,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "担保物权的规定",
+      "stem": "甲向乙借款10 万元，丙用自己的一台设备为该笔借款设定抵押担保。后甲征得乙的同意后，将其中4 万元的债务转让给丁。根据物权法律制度的规定，下列表述中，正确的有（）。"
+    },
+    {
+      "id": 281,
+      "source_id": "138003",
+      "question_number": 54,
+      "knowledge_point_id": 54,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "担保物权的规定",
+      "stem": "陈某用自己的轿车作抵押向银行借款40 万元，并办理了抵押登记手续。某日，该汽车被王某的儿子放鞭炮炸毁，王某赔偿了该车的全部损失，根据物权法律制度的规定，下列关于该抵押担保的说法正确的有（）。"
+    },
+    {
+      "id": 282,
+      "source_id": "138003",
+      "question_number": 55,
+      "knowledge_point_id": 54,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "担保物权的规定",
+      "stem": "根据物权法律制度的规定，下列担保合同中，原则上无效的有（）。"
+    },
+    {
+      "id": 283,
+      "source_id": "138003",
+      "question_number": 56,
+      "knowledge_point_id": 54,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "担保物权的规定",
+      "stem": "2024 年6 月10 日，甲公司和乙公司签订借款合同，约定乙公司借给甲公司1 000 万元，借款期限1 年。同日，为担保乙公司1 000 万元债权的实现，乙公司与丙公司签订了担保合同。2025 年6 月10 日，甲公司无力清偿乙公司600 万元债务。随后，人民法院认定担保合同无效。关于本案的下列说法中，正确的有（）。"
+    },
+    {
+      "id": 284,
+      "source_id": "138003",
+      "question_number": 59,
+      "knowledge_point_id": 55,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "抵押权的规定",
+      "stem": "下列财产中，不得作为抵押财产的有（）。第四章"
+    },
+    {
+      "id": 285,
+      "source_id": "138003",
+      "question_number": 61,
+      "knowledge_point_id": 55,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "抵押权的规定",
+      "stem": "2025 年9 月，甲公司与乙公司订立借款金额为4 000 万元的借款合同，并以甲公司通过划拨方式取得的建设用地使用权设定抵押，双方办理了抵押登记。2025 年11 月，甲公司在已设定抵押的土地上建造办公楼，并于2026 年2 月完工。后甲公司无力偿还借款，乙公司拟实现抵押权。已知该建设用地使用权的土地出让金为3 500 万元；抵押的建设用地使用权连同办公楼"
+    },
+    {
+      "id": 286,
+      "source_id": "138003",
+      "question_number": 62,
+      "knowledge_point_id": 55,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "抵押权的规定",
+      "stem": "当事人按照担保合同的约定，主张抵押权的效力及于续建部分、新增建筑物以及规划中尚未建造的建筑物的，人民法院应予支持。（）。"
+    },
+    {
+      "id": 287,
+      "source_id": "138003",
+      "question_number": 63,
+      "knowledge_point_id": 55,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "抵押权的规定",
+      "stem": "下列抵押财产中，抵押权自登记时设立的有（）。"
+    },
+    {
+      "id": 288,
+      "source_id": "138003",
+      "question_number": 64,
+      "knowledge_point_id": 55,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "抵押权的规定",
+      "stem": "2025 年6 月1 日，甲向乙借款50 万元，约定以甲的A 幢房屋为乙设定抵押担保，双方为此签订了抵押合同。次日，双方在办理抵押登记时，登记为将甲的B 幢房屋抵押给乙。后甲未能按约还款，乙欲行使抵押权。根据物权法律制度的规定，下列关于乙行使抵押权的表述中，正确的是（）。"
+    },
+    {
+      "id": 289,
+      "source_id": "138003",
+      "question_number": 67,
+      "knowledge_point_id": 55,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "抵押权的规定",
+      "stem": "抵押权依法设立后，抵押财产被添附的，下列说法中，不正确的有（）。"
+    },
+    {
+      "id": 290,
+      "source_id": "138003",
+      "question_number": 70,
+      "knowledge_point_id": 55,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "抵押权的规定",
+      "stem": "2023 年初，甲向银行借款（借期为2 年）并以一件龙袍为银行提供抵押担保，双方签订了书面抵押合同。2024 年初，甲将该件龙袍出租给乙使用。一年后，甲无力偿还该笔贷款，则下列说法不正确的有（）。"
+    },
+    {
+      "id": 291,
+      "source_id": "138003",
+      "question_number": 71,
+      "knowledge_point_id": 55,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "抵押权的规定",
+      "stem": "甲将其所有的一台机床抵押给乙，双方签订了抵押合同但未办理抵押登记，甲、乙未约定抵押期间抵押财产不得转让。一个月后，甲将该机床以市价转让给了丙，并为丙办理了所有权转移登记手续。根据物权法律制度的规定，下列说法中，不正确的有（）。第四章"
+    },
+    {
+      "id": 292,
+      "source_id": "138003",
+      "question_number": 73,
+      "knowledge_point_id": 55,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "抵押权的规定",
+      "stem": "张某于2025 年2 月10 日向甲银行借款30 万元，以自己的一套房屋提供抵押但未办理抵押登记。张某又于2025 年3 月1 日向乙银行借款50 万元，同样以该房屋提供抵押并于3 月5 日办理抵押登记。张某又于2025 年5 月1 日向丙银行借款80 万元，同样以该房屋提供抵押并于5 月5 日办理抵押登记。三笔借款均到期后张某无力清偿，该房屋拍卖所得100"
+    },
+    {
+      "id": 293,
+      "source_id": "138003",
+      "question_number": 74,
+      "knowledge_point_id": 55,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "抵押权的规定",
+      "stem": "甲因急需用钱，以其价值15 000 元的相机作抵押，分别向乙借款6 000 元、向丙借款4 000 元。甲与乙于1 月8 日签订了相机抵押合同，双方未办理抵押登记；甲与丙于1 月9 日签订了相机抵押合同，双方亦未办理抵押登记。后因甲无力偿还到期借款，乙、丙行使抵押权，依法拍卖甲的相机，拍卖所得款9 000 元。下列关于乙、丙对相机拍卖所得款的分配方案中，正确"
+    },
+    {
+      "id": 294,
+      "source_id": "138003",
+      "question_number": 75,
+      "knowledge_point_id": 55,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "抵押权的规定",
+      "stem": "甲公司分别向A、B、C 三家银行借款，且均以甲公司所有的一幢厂房设定抵押并依次办理了抵押登记手续。A 银行的债权为400 万元、B 银行的债权为300 万元、C 银行的债权为500 万元。后A 银行与C 银行协商互换各自抵押权的顺位，通知甲公司并办理了变更登记，但B 银行对此完全不知情。现三笔借款均已到期，甲公司无力清偿，用于抵押的厂房变现所得为750 万元"
+    },
+    {
+      "id": 295,
+      "source_id": "138003",
+      "question_number": 80,
+      "knowledge_point_id": 55,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "抵押权的规定",
+      "stem": "甲公司向乙银行借款100 万元，将其现有的以及将有的生产设备、原材料、半成品、产品一并抵押给乙银行，双方签订了抵押合同但未办理抵押登记。抵押期间，未经乙银行的同意，甲公司以市场价格将一台生产设备转让给了丙公司，并已交付，后甲公司不能向乙银行清偿到期债务，下列关于该抵押权的表述中，正确的有（）。"
+    },
+    {
+      "id": 296,
+      "source_id": "138003",
+      "question_number": 82,
+      "knowledge_point_id": 55,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "抵押权的规定",
+      "stem": "根据物权法律制度的规定，下列情形中，导致最高额抵押权所担保的债权确定的有（）。"
+    },
+    {
+      "id": 297,
+      "source_id": "138003",
+      "question_number": 84,
+      "knowledge_point_id": 56,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "质权的规定",
+      "stem": "甲向乙借款10 万元，甲的朋友丙以其价值15 万元的轿车提供担保，乙与丙签订了抵押合同，但未办理抵押登记。后丙向丁借款8 万元，以该车设定质押。丙与丁签订了质押合同，并于次日向丁交付了轿车。因甲和丙均未清偿各自到期债务，遂发生纠纷。下列关于本案担保物权设立及效力的说法中，正确的有（）。"
+    },
+    {
+      "id": 298,
+      "source_id": "138003",
+      "question_number": 85,
+      "knowledge_point_id": 56,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "质权的规定",
+      "stem": "2 月1 日，甲向乙借款100 万元，双方签订了借款合同，次日，甲将自有的黄金手铐质押给乙，双方签订了质押合同。2 月3 日，甲、乙和监管人签订三方协议，约定黄金手铐交由监管人代为监管，2 月4 日，甲公司将黄金手铐交给监管人。根据物权法律制度的规定，上述质权设立的时间为（）。"
+    },
+    {
+      "id": 299,
+      "source_id": "138003",
+      "question_number": 86,
+      "knowledge_point_id": 56,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "质权的规定",
+      "stem": "为债务人提供质押担保的第三人，在质权人实现质权后，有权向债务人追偿。"
+    },
+    {
+      "id": 300,
+      "source_id": "138003",
+      "question_number": 88,
+      "knowledge_point_id": 56,
+      "chapter": "物权法律制度",
+      "exam_point": "担保物权",
+      "knowledge_point": "质权的规定",
+      "stem": "下列关于权利质权设立时间的表述中，正确的有（）。"
+    },
+    {
+      "id": 301,
+      "source_id": "333804",
+      "question_number": 1,
+      "knowledge_point_id": 59,
+      "chapter": "合同法律制度",
+      "exam_point": "合同法律制度概述",
+      "knowledge_point": "合同的概念和分类",
+      "stem": "下列合同中，属于实践合同的有（）。"
+    },
+    {
+      "id": 302,
+      "source_id": "333804",
+      "question_number": 2,
+      "knowledge_point_id": 59,
+      "chapter": "合同法律制度",
+      "exam_point": "合同法律制度概述",
+      "knowledge_point": "合同的概念和分类",
+      "stem": "下列对合同分类的表述中，正确的有（）。"
+    },
+    {
+      "id": 303,
+      "source_id": "333804",
+      "question_number": 4,
+      "knowledge_point_id": 66,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的效力",
+      "knowledge_point": "合同生效的规定",
+      "stem": "玺乐公司没有取得商品房预售许可证即与陈某签订了商品房预售合同。因房价上涨，玺乐公司向法院起诉主张商品房预售合同无效。经查，玺乐公司已经符合取得商品房预售许可证的条件却迟迟不去办理。关于玺乐公司与陈某签订的商品房预售合同效力的表述中，正确的是（"
+    },
+    {
+      "id": 304,
+      "source_id": "333804",
+      "question_number": 6,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "根据合同法律制度的规定，下列有关合同订立程序的表述中，正确的是（）。"
+    },
+    {
+      "id": 305,
+      "source_id": "333804",
+      "question_number": 7,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "甲设备厂的销售人员王某拟向乙公司出售一套大型生产设备，经与乙公司的采购人员李某协商，李某请王某向自己的企业邮箱发送一份要约。4 月1 日，王某向李某的私人邮箱发送了一份详细的要约，该邮件实时到达。4 月5 日，王某发现发错邮箱，遂向李某的企业邮箱发送了一份要约，该邮件实时到达。4 月6 日，王某通知李某要约已经发送，李某回复“收到”。4 月7 日，李某打开邮"
+    },
+    {
+      "id": 306,
+      "source_id": "333804",
+      "question_number": 8,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "9 月1 日，周某未与吴某协商，自行通过电子邮件向吴某的A 电子邮箱发送一份要约，邮件实时到达；9 月2 日，周某通过微信告知吴某此事，吴某回复“收到”；9 月5 日，吴某拟登录A 邮箱进行查阅，但由于吴某遗忘密码而未能成功登录，遂于当日申请“找回密码”；9 月6 日，吴某凭找回的登录密码登录邮箱阅读了该要约。该要约的生效时间为（）。"
+    },
+    {
+      "id": 307,
+      "source_id": "333804",
+      "question_number": 9,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "甲向乙以信件的方式发出出售动感单车的要约，信件的落款日期为2025 年1月6 日，发出日期为2025 年1 月8 日，到达乙家信箱的日期为2025 年1 月10 日，乙取出该信件的日期是2025 年1 月11 日，此要约的生效日期是（）。"
+    },
+    {
+      "id": 308,
+      "source_id": "333804",
+      "question_number": 10,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "甲到乙家做客，看到一张王心凌的签名CD，甲对该CD 爱不释手，乙就口头提议500 元卖给甲。但甲因最近资金紧张，就未置可否。当晚甲越想越觉得放不下。第二天，甲醒来打电话告诉乙说同意以500 元购买该CD。甲同意购买CD 的意思表示属于（）。第五章"
+    },
+    {
+      "id": 309,
+      "source_id": "333804",
+      "question_number": 12,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "根据合同法律制度的规定，下列情形中，不属于要约失效原因的是（）。"
+    },
+    {
+      "id": 310,
+      "source_id": "333804",
+      "question_number": 13,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "6 月1 日，甲公司向乙公司发出一封信件，欲购买十件泰式桌旗，666 元一件。6 月2 日，乙公司收到了信件。6 月3 日，甲公司发出撤销要约的信件，结果因为天气原因6 月5 日才到达。6 月4 日乙公司回复甲公司称“只有台式桌旗，888 元一件”。6 月6 日甲公司回复不购买该桌旗。甲公司发出的要约的失效日期是（）。"
+    },
+    {
+      "id": 311,
+      "source_id": "333804",
+      "question_number": 14,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "8 月1 日，张某向李某发出要约表示愿意以1 万元购买李某的Swich 游戏机，8 月15 日前答复有效。下列关于该要约效力的表述中，正确的有（）。"
+    },
+    {
+      "id": 312,
+      "source_id": "333804",
+      "question_number": 15,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "赵某有一台电视机，该电视机的遥控器已经损坏。6 月1 日赵某向李某发出邮件称欲以3 000 元出售该电视机，6 月3 日李某回复称如果价格能降至2 500 元且能够附赠一个新的遥控器则愿意购买，6 月5 日赵某复函称附赠遥控器没有问题，但价格最低为2 800 元。6 月7 日李某复函表示同意。根据合同法律制度的规定，下列各项中属于要约的有（）。"
+    },
+    {
+      "id": 313,
+      "source_id": "333804",
+      "question_number": 16,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "赵某以信件形式向钱某发出要约，信件未载明承诺开始日期，仅规定承诺期限为15 天。7 月4 日，赵某将信件交付邮局，邮局将信件加盖7 月5 日邮戳发出；7 月7 日，信件送达受要约人钱某的信箱；钱某因出差，直至7 月15 日才阅读信件内容。该承诺期限的起算日为（）。第五章"
+    },
+    {
+      "id": 314,
+      "source_id": "333804",
+      "question_number": 17,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "2024 年4 月24 日，甲向乙发出函件称：“本人欲以每吨5 000 元的价格出售螺纹钢100 吨。如欲购买，请于5 月10 日前让本人知悉。”乙于4 月27 日收到甲的函件，并于次日回函表示愿意购买，正常情况下5 月10 日前可以到达甲处，但由于邮递员投递错误，乙的回函于5 月11 日方到达甲处。因已超过5 月10 日的最后期限，甲未再理会乙，而将钢材售"
+    },
+    {
+      "id": 315,
+      "source_id": "333804",
+      "question_number": 18,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "根据合同法律制度的规定，下列关于承诺的表述中，正确的是（）。"
+    },
+    {
+      "id": 316,
+      "source_id": "333804",
+      "question_number": 19,
+      "knowledge_point_id": 61,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的形式",
+      "stem": "下列合同订立的形式中，属于书面形式的有（）。"
+    },
+    {
+      "id": 317,
+      "source_id": "333804",
+      "question_number": 20,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "2025 年9 月1 日，甲、乙两公司以电子邮件的方式就一批木材的买卖合同进行磋商，双方在邮件中约定：达成买卖合同以最终书面签订确认书为准。9 月2 日，甲公司向乙公司支付了一笔定金。9 月5 日，甲公司在回复同意乙公司最后一处修改的电子邮件后认为，双方已经就买卖合同的各项细节达成一致，遂向乙公司发出木材，但木材到达乙公司处被拒收。有关本案的下列说法中，正确"
+    },
+    {
+      "id": 318,
+      "source_id": "333804",
+      "question_number": 21,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "2025 年11 月1 日，搜宝平台上发布了一款组合家具的全部商品信息。11 月2 日，杨某在该平台选中该款商品后，家里突然断网。11 月3 日，杨某重新在该平台选中该款商品并提交订单成功。11 月4 日，杨某支付了全部的款项。11 月5 日，搜宝客服联系杨某确认地址后于当日发货。搜宝平台与杨某之间买卖合同的成立时间是（）。第五章"
+    },
+    {
+      "id": 319,
+      "source_id": "333804",
+      "question_number": 22,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "甲、乙两公司拟签订一份钢材买卖合同，甲公司签字盖章后尚未将书面合同邮寄给乙公司时，即接到乙公司按照合同约定发来的钢材，甲公司经清点后将该批钢材入库。次日将签字盖章后的书面合同发给乙公司。乙公司收到后，即在合同书上签字盖章。该合同成立的时间是（）。"
+    },
+    {
+      "id": 320,
+      "source_id": "333804",
+      "question_number": 24,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "郑某和张某拟订立一份买卖合同。双方在A 地谈妥合同的主要条款，郑某于B 地在合同上签字，其后，张某于C 地在合同上盖章，合同的履行地为D 地。当事人对合同成立地点未作特别约定，该买卖合同的成立地点为（）。"
+    },
+    {
+      "id": 321,
+      "source_id": "333804",
+      "question_number": 25,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "武当山的甲公司与龙虎山的乙公司协商订立一份书面合同，双方约定合同成立地点在齐云山，但实际情况是，甲公司在蓬莱岛签字盖章后将合同邮寄到青城山给乙公司签字盖章。该合同的成立地点是（）。"
+    },
+    {
+      "id": 322,
+      "source_id": "333804",
+      "question_number": 27,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "甲公司得知乙公司正在与丙公司进行商务谈判，甲公司本无意与丙公司签约合作，但为了排挤竞争对手乙公司，就向丙公司提出了更好的交易条件。乙公司退出后，甲公司即终止了与丙公司的谈判，并与丁公司签约，给丙公司造成了经济损失。有关本案的说法中，正确的有（）。"
+    },
+    {
+      "id": 323,
+      "source_id": "333804",
+      "question_number": 30,
+      "knowledge_point_id": 62,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的订立",
+      "knowledge_point": "合同订立的方式",
+      "stem": "根据合同法律制度的规定，提供格式条款一方拟定的下列格式条款中，无效的是（）。"
+    },
+    {
+      "id": 324,
+      "source_id": "333804",
+      "question_number": 35,
+      "knowledge_point_id": 68,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的履行",
+      "knowledge_point": "合同履行的规则",
+      "stem": "2024 年1 月1 日，尚某向祖某借款100 万元。尚某和祖某在借款合同中约定：该笔借款到期后由谢某向祖某履行该笔债务。双方无其他约定，根据合同法律制度的规定，关于本案的下列说法中，正确的有（）。"
+    },
+    {
+      "id": 325,
+      "source_id": "333804",
+      "question_number": 36,
+      "knowledge_point_id": 68,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的履行",
+      "knowledge_point": "合同履行的规则",
+      "stem": "2024 年1 月1 日，尚某向祖某借款100 万元，尚某和谢某约定：该笔借款到期后由谢某向祖某偿还，祖某表示同意。后谢某始终未清偿该笔债务。下列关于祖某债权主张的下列表述中，正确的是（）。"
+    },
+    {
+      "id": 326,
+      "source_id": "333804",
+      "question_number": 38,
+      "knowledge_point_id": 69,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的履行",
+      "knowledge_point": "抗辩权的行使",
+      "stem": "根据合同法律制度的规定，下列关于行使同时履行抗辩权必须具备条件的表述中，正确的有（）。"
+    },
+    {
+      "id": 327,
+      "source_id": "333804",
+      "question_number": 40,
+      "knowledge_point_id": 69,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的履行",
+      "knowledge_point": "抗辩权的行使",
+      "stem": "根据合同法律制度的规定，应当先履行债务的当事人，有确切证据证明对方当事人发生了特定情形的，可以行使不安抗辩权。该特定情形包括（）。"
+    },
+    {
+      "id": 328,
+      "source_id": "333804",
+      "question_number": 41,
+      "knowledge_point_id": 71,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的保全",
+      "knowledge_point": "代位权的规定",
+      "stem": "2024 年5 月1 日，赵某对钱某享有的10 万元债权到期，钱某无力清偿。2024年6 月1 日，赵某得知李某拖欠钱某租金18 万元，钱某每日向李某发微信催债均无果。现赵某拟行使代位权。下列关于赵某行使代位权的表述中，正确的是（）。"
+    },
+    {
+      "id": 329,
+      "source_id": "333804",
+      "question_number": 44,
+      "knowledge_point_id": 72,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的保全",
+      "knowledge_point": "撤销权的规定",
+      "stem": "下列法定不当处分财产的行为中，应以债务人的相对人知情为行使撤销权前提的是（）。"
+    },
+    {
+      "id": 330,
+      "source_id": "333804",
+      "question_number": 45,
+      "knowledge_point_id": 72,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的保全",
+      "knowledge_point": "撤销权的规定",
+      "stem": "根据合同法律制度的规定，下列关于债权人撤销权的表述中，正确的是（）。"
+    },
+    {
+      "id": 331,
+      "source_id": "333804",
+      "question_number": 47,
+      "knowledge_point_id": 74,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的变更和转让",
+      "knowledge_point": "合同转让的规定",
+      "stem": "赵某向钱某购买一批瓷砖，价款为5 万元，合同履行前，钱某未经赵某的同意，将价款债权转让给了孙某，双方签订了债权转让协议。已知，赵某与钱某未约定合同权利不得转让。下列有关钱某的债权转让行为效力的说法中，符合合同法律制度规定的有（）。"
+    },
+    {
+      "id": 332,
+      "source_id": "333804",
+      "question_number": 48,
+      "knowledge_point_id": 74,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的变更和转让",
+      "knowledge_point": "合同转让的规定",
+      "stem": "根据合同法律制度的规定，下列关于合同权利转让表述正确的有（）。第五章"
+    },
+    {
+      "id": 333,
+      "source_id": "333804",
+      "question_number": 50,
+      "knowledge_point_id": 74,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的变更和转让",
+      "knowledge_point": "合同转让的规定",
+      "stem": "债务人将债务的全部或者部分转移给第三人的，债务人或者第三人可以催告债权人在合理期限内予以同意，债权人未作表示的，视为同意。（"
+    },
+    {
+      "id": 334,
+      "source_id": "333804",
+      "question_number": 51,
+      "knowledge_point_id": 75,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的消灭",
+      "knowledge_point": "清偿的规定",
+      "stem": "根据合同法律制度规定，债务人对同一债权人负担的数项债务种类相同，债务人的给付不足以清偿全部债务的，在数项债务均已到期且当事人未作约定、债务人清偿时未作指定的情况下，债务履行规则应为（）。"
+    },
+    {
+      "id": 335,
+      "source_id": "333804",
+      "question_number": 54,
+      "knowledge_point_id": 76,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的消灭",
+      "knowledge_point": "抵销的规定",
+      "stem": "根据合同法律制度的规定，下列关于法定抵销的表述中，正确的有（）。第五章"
+    },
+    {
+      "id": 336,
+      "source_id": "333804",
+      "question_number": 55,
+      "knowledge_point_id": 76,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的消灭",
+      "knowledge_point": "抵销的规定",
+      "stem": "甲欠乙6 万元，诉讼时效已经届满。乙欠甲10 万元，诉讼时效尚未届满。2025 年6 月25 日，甲向乙发出抵销通知，6 月26 日通知到达乙，下列表述正确的有（）。"
+    },
+    {
+      "id": 337,
+      "source_id": "333804",
+      "question_number": 57,
+      "knowledge_point_id": 78,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的消灭",
+      "knowledge_point": "免除的规定",
+      "stem": "根据合同法律制度的规定，下列关于免除的说法中，不正确的有（）。"
+    },
+    {
+      "id": 338,
+      "source_id": "333804",
+      "question_number": 58,
+      "knowledge_point_id": 79,
+      "chapter": "合同法律制度",
+      "exam_point": "合同的消灭",
+      "knowledge_point": "混同的规定",
+      "stem": "甲公司和乙公司签订买卖合同，合同尚未履行时，合同权利义务因甲、乙公司合并为丙公司而终止。该终止情形属于（）。"
+    },
+    {
+      "id": 339,
+      "source_id": "333804",
+      "question_number": 63,
+      "knowledge_point_id": 82,
+      "chapter": "合同法律制度",
+      "exam_point": "违约责任",
+      "knowledge_point": "承担违约责任的形式",
+      "stem": "根据合同法律制度的规定，下列各项中，人民法院可以要求债务人继续履行的是（）。"
+    },
+    {
+      "id": 340,
+      "source_id": "333804",
+      "question_number": 64,
+      "knowledge_point_id": 82,
+      "chapter": "合同法律制度",
+      "exam_point": "违约责任",
+      "knowledge_point": "承担违约责任的形式",
+      "stem": "根据合同法律制度的规定，下列关于当事人一方违约后，损失扩大法律后果的表述中，正确的有（）。"
+    },
+    {
+      "id": 341,
+      "source_id": "333804",
+      "question_number": 65,
+      "knowledge_point_id": 82,
+      "chapter": "合同法律制度",
+      "exam_point": "违约责任",
+      "knowledge_point": "承担违约责任的形式",
+      "stem": "根据合同法律制度的规定，当事人一方不履行合同义务，给对方造成损失的，应当按照约定承担赔偿责任。损失赔偿额应当相当于因违约造成的损失，包括合同履行后可以获得的利益，但不得超过（）。第五章"
+    },
+    {
+      "id": 342,
+      "source_id": "333804",
+      "question_number": 67,
+      "knowledge_point_id": 82,
+      "chapter": "合同法律制度",
+      "exam_point": "违约责任",
+      "knowledge_point": "承担违约责任的形式",
+      "stem": "尚中中向祖伟伟购入一批秋裤，双方签订了一份秋裤买卖合同，该合同的总价款为100 万元，合同签订后，尚中中按约定向祖伟伟给付了定金30 万元。下列关于本案定金责任承担的表述中，正确的有（）。"
+    },
+    {
+      "id": 343,
+      "source_id": "333804",
+      "question_number": 69,
+      "knowledge_point_id": 84,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "买卖合同的规定",
+      "stem": "2024 年3 月1 日，A 地的甲公司与B 地的乙公司在C 地订立了一份办公桌买卖合同，双方未约定交付地点且不能通过其他方式确定交付地点。甲公司委托D 地的丙公司将办公桌运送给乙公司。3 月15 日，甲公司将办公桌交给丙公司。3 月16 日，丙公司开始运送该办公桌。3 月17 日，该办公桌运送至乙公司。根据合同法律制度的规定，该办公桌的交付地点为（）。"
+    },
+    {
+      "id": 344,
+      "source_id": "333804",
+      "question_number": 71,
+      "knowledge_point_id": 84,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "买卖合同的规定",
+      "stem": "甲拥有一辆汽车欲出售。2024 年2 月1 日，甲与乙签订了买卖合同，并与乙约定一个月后交付汽车；2 月5 日，丙愿意出更高的价格购买该汽车，甲遂与丙签订买卖合同，并到车辆管理部门办理了登记手续，同时约定半个月后交付汽车；2 月10 日，丁也愿意购买该汽车且出价最高，甲遂与丁签订买卖合同，丁当即支付全款，双方约定两天后交付汽车。根据合同法律制度的规定，下列关"
+    },
+    {
+      "id": 345,
+      "source_id": "333804",
+      "question_number": 72,
+      "knowledge_point_id": 84,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "买卖合同的规定",
+      "stem": "甲、乙双方于2025 年1 月7 日订立设备买卖合同，甲向乙购买设备一台。双方约定：价款100 万元，甲付清全部价款后，设备的所有权才转移给甲。1 月10 日，乙向甲交付了设备。1 月20 日，甲将设备以市价转让给丙且完成交付。2 月1 日，甲告知乙自己因经营不善无力支付设备购买价款。已知，丙对甲、乙之间所有权保留买卖一事并不知情，甲、乙亦未办理登记手续。有"
+    },
+    {
+      "id": 346,
+      "source_id": "333804",
+      "question_number": 73,
+      "knowledge_point_id": 84,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "买卖合同的规定",
+      "stem": "下列属于所有权保留条款中，出卖人有权取回标的物的情形有（）。"
+    },
+    {
+      "id": 347,
+      "source_id": "333804",
+      "question_number": 74,
+      "knowledge_point_id": 84,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "买卖合同的规定",
+      "stem": "2009 年5 月12 日，甲因农忙借用邻居乙的一头耕牛耕地三天。5 月14 日，甲、乙两人又以2500 元价格达成购买该耕牛的买卖合同，双方约定甲应在5 月31 日前付清价款。5 月14 日晚，当地暴发泥石流，导致耕牛灭失。根据合同法律制度的有关规定，下列表述中，正确的有（）。"
+    },
+    {
+      "id": 348,
+      "source_id": "333804",
+      "question_number": 76,
+      "knowledge_point_id": 84,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "买卖合同的规定",
+      "stem": "5 月12 日，甲从乙处购买一批设备，合同中约定由乙代甲办理托运。6 月1日，由丙从A 地运输。6 月12 日，甲与丁订立买卖合同，合同约定将丙负责运输的设备卖给丁，预计6 月20 日到达目的地。6 月18 日，运输途中发生泥石流，导致设备全部毁损。则该批设备的毁损（）。"
+    },
+    {
+      "id": 349,
+      "source_id": "333804",
+      "question_number": 78,
+      "knowledge_point_id": 84,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "买卖合同的规定",
+      "stem": "甲公司向乙公司订购了一套生产设备，双方签订的买卖合同中对设备的型号、规格、质量等做了明确约定，但未约定质量检验期间。甲公司收到设备后，因故一直未使用，亦未支付剩余货款。收到货物三年后，甲公司才开始使用该设备，却发现该设备的质量与合同约定不符。当乙公司要求甲公司支付剩余货款时，甲公司以设备质量不合格为由拒绝，并要求乙公司承担违约责任。下列关于甲公司权利义务的表"
+    },
+    {
+      "id": 350,
+      "source_id": "333804",
+      "question_number": 80,
+      "knowledge_point_id": 84,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "买卖合同的规定",
+      "stem": "曾某购买某汽车销售公司的轿车一辆，总价款20 万元，约定分10 次付清，每次两万元，每月的第一天支付。曾某按期支付六次共计12 万元后，因该款汽车大幅降价，曾某遂停止付款。汽车销售公司催告后曾某仍未支付到期价款，下列表述正确的有（）。第五章"
+    },
+    {
+      "id": 351,
+      "source_id": "333804",
+      "question_number": 81,
+      "knowledge_point_id": 84,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "买卖合同的规定",
+      "stem": "根据合同法律制度的规定，以下不属于试用买卖合同的有（）。"
+    },
+    {
+      "id": 352,
+      "source_id": "333804",
+      "question_number": 82,
+      "knowledge_point_id": 84,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "买卖合同的规定",
+      "stem": "根据合同法律制度的规定，下列关于试用买卖合同的表述中，不正确的有）。"
+    },
+    {
+      "id": 353,
+      "source_id": "333804",
+      "question_number": 83,
+      "knowledge_point_id": 84,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "买卖合同的规定",
+      "stem": "杨女士在楽居地产购买了一套商品房，下列情形中，杨女士可以请求解除商品房买卖合同的有（）。"
+    },
+    {
+      "id": 354,
+      "source_id": "333804",
+      "question_number": 84,
+      "knowledge_point_id": 84,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "买卖合同的规定",
+      "stem": "甲房地产开发公司在预售某住宅小区的广告中，宣称其“容积率不高于1.2”“绿地面积超过50%”，引起购房者的热烈关注，所预售的商品房一售而空，价格也比周边小区高出20%。但是，该小区商品房的预售合同中未对容积和公共绿地面积问题作约定。甲公司交房时，购房者乙却发现小区的容积率超过2.0，绿地面积只有20%，并且在调查后得知，甲公司报经批准的规划就是如此。下列关于"
+    },
+    {
+      "id": 355,
+      "source_id": "333804",
+      "question_number": 87,
+      "knowledge_point_id": 85,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "赠与合同的规定",
+      "stem": "甲为庆祝好友乙60 岁生日，拟赠与其古董瓷瓶一只。但双方约定，瓷瓶交付之后，甲可以随时借用该瓷瓶，根据合同法律制度的规定，下列说法中，正确的有（）。"
+    },
+    {
+      "id": 356,
+      "source_id": "333804",
+      "question_number": 89,
+      "knowledge_point_id": 86,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "借款合同的规定",
+      "stem": "2025 年2 月1 日，张某向A 银行借款，双方签订了一份书面的借款合同，合同约定如下：“借款本金为100 万元，借款期限为2 年，发放贷款时间为2025 年2 月2 日，利息10 万元于提供借款当天预先扣除”。除上述约定外，双方未就付息期限以及其他事项作出特别约定。根据合同法律制度的规定，有关该合同的表述中，正确的是（）。"
+    },
+    {
+      "id": 357,
+      "source_id": "333804",
+      "question_number": 90,
+      "knowledge_point_id": 86,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "借款合同的规定",
+      "stem": "2025 年3 月1 日，杨某向高某借款，双方签订了一份书面的借款合同，合同约定如下：借款本金为50 万元，年利率为10%，借款用途为购买婚房。除上述约定外，双方未就借款期限以及其他事项作出特别约定。3 月5 日，高某将50 万元转入杨某的工行账户。下列关于该借款合同的表述中，不正确的有（）。"
+    },
+    {
+      "id": 358,
+      "source_id": "333804",
+      "question_number": 92,
+      "knowledge_point_id": 88,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "租赁合同的规定",
+      "stem": "根据合同法律制度的规定，下列关于租赁合同的表述中，正确的是（）。"
+    },
+    {
+      "id": 359,
+      "source_id": "333804",
+      "question_number": 94,
+      "knowledge_point_id": 88,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "租赁合同的规定",
+      "stem": "张某将一套房屋出租给李某，3 月1 日李某将房屋转租给林某，5 月1 日张某得知转让事宜但未表示异议。次年2 月1 日，由于李某迟迟未交房租，张某欲解除合同收回房屋，林某得知后表示愿意替李某支付房租。张某到房屋后发现，由于林某养了很多宠物，随处便溺，导致地板泡水开裂。下列说法正确的有（）。"
+    },
+    {
+      "id": 360,
+      "source_id": "333804",
+      "question_number": 95,
+      "knowledge_point_id": 88,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "租赁合同的规定",
+      "stem": "甲与乙订立租赁合同，将自己所有的一栋房屋租赁给乙使用。租赁期间，甲在征得乙同意后，将房屋卖给丙，并转移了所有权。下列有关该租赁合同效力的表述中，正确的是（）。"
+    },
+    {
+      "id": 361,
+      "source_id": "333804",
+      "question_number": 98,
+      "knowledge_point_id": 88,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "租赁合同的规定",
+      "stem": "出租人甲就同一房屋先后与乙、丙、丁、戊订立均有效的租赁合同，其中乙最先订立合同，丙合法占有租赁房屋，丁已经办理登记备案手续，戊出价最高。现四位承租人均向县人民法院提起诉讼主张履行合同，应判决甲向其履行租赁合同的是（）。"
+    },
+    {
+      "id": 362,
+      "source_id": "333804",
+      "question_number": 99,
+      "knowledge_point_id": 88,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "租赁合同的规定",
+      "stem": "下列关于融资租赁合同的说法中，错误的是（）。"
+    },
+    {
+      "id": 363,
+      "source_id": "333804",
+      "question_number": 101,
+      "knowledge_point_id": 87,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "保证合同的规定",
+      "stem": "根据合同法律制度的规定，下列属于有效保证合同的有（）。"
+    },
+    {
+      "id": 364,
+      "source_id": "333804",
+      "question_number": 102,
+      "knowledge_point_id": 87,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "保证合同的规定",
+      "stem": "根据合同法律制度的规定，下列属于一般保证的保证人不得行使先诉抗辩权的情形有（）。"
+    },
+    {
+      "id": 365,
+      "source_id": "333804",
+      "question_number": 105,
+      "knowledge_point_id": 87,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "保证合同的规定",
+      "stem": "甲借款给乙，约定于2021 年3 月1 日前还清本息，丙承担连带责任保证。履行期届满后，乙没有还款，甲也一直没有催乙还款。2024 年4 月1 日，因乙一直未还款，甲遂要求丙承担保证责任。根据合同法律制度的规定，下列关于丙保证责任承担的说法中，正确的是（）。"
+    },
+    {
+      "id": 366,
+      "source_id": "333804",
+      "question_number": 107,
+      "knowledge_point_id": 87,
+      "chapter": "合同法律制度",
+      "exam_point": "主要合同",
+      "knowledge_point": "保证合同的规定",
+      "stem": "甲为乙的债务人，丙为该债务的保证人，甲以其自有房屋为该债务提供抵押担保。甲、丙各方未就担保责任的承担顺序作出约定。现甲不履行到期债务，乙欲向甲、丙主张承担担保责任。根据合同法律制度的规定，下列关于乙主张担保责任承担顺序的表述中，正确的是（）。"
+    },
+    {
+      "id": 367,
+      "source_id": "710399",
+      "question_number": 1,
+      "knowledge_point_id": 33,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业与第三人关系的规定",
+      "stem": "根据合伙企业法律制度的规定，下列关于普通合伙企业债务清偿的表述中，正确的是（）。"
+    },
+    {
+      "id": 368,
+      "source_id": "710399",
+      "question_number": 3,
+      "knowledge_point_id": 33,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业与第三人关系的规定",
+      "stem": "李某、王某、赵某3 人共同出资设立了一家特殊的普通合伙企业，李某在执行合伙事务时因重大过失造成合伙企业负债10 万元，下列关于合伙人对此损失承担责任的表述中，符合合伙企业法律制度规定的是（）。"
+    },
+    {
+      "id": 369,
+      "source_id": "710399",
+      "question_number": 4,
+      "knowledge_point_id": 33,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业与第三人关系的规定",
+      "stem": "A、B、C、D 各实际缴付出资10 万元设立甲有限合伙企业（以下简称“甲企业”），A 为有限合伙人，其他3 人为普通合伙人。现甲企业以其全部财产对债权人乙进行清偿后仍欠乙80 万元到期债务不能清偿。下列关于乙的权利的表述中，正确的有（）。"
+    },
+    {
+      "id": 370,
+      "source_id": "710399",
+      "question_number": 5,
+      "knowledge_point_id": 33,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业与第三人关系的规定",
+      "stem": "甲原来是A 有限合伙企业的普通合伙人，于2025 年1 月1 日转为有限合伙人，合伙企业未就该事项通知其客户乙，原来与乙进行的交易一直由甲在负责，甲转为有限合伙人后又以A 有限合伙企业的名义与乙订立了一个10 万元的合同。有关本案的下列说法正确的有）。第三章"
+    },
+    {
+      "id": 371,
+      "source_id": "710399",
+      "question_number": 6,
+      "knowledge_point_id": 33,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业与第三人关系的规定",
+      "stem": "普通合伙企业的合伙人在合伙协议中未对该合伙企业的利润分配、亏损分担进行约定的，应由合伙人平均分配、分担。（"
+    },
+    {
+      "id": 372,
+      "source_id": "710399",
+      "question_number": 7,
+      "knowledge_point_id": 33,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业与第三人关系的规定",
+      "stem": "张某等3 人共同出资设立一普通合伙企业，实缴出资比例为1:2:3。张某在执行合伙事务时因重大过失造成合伙企业负债。已知合伙协议未约定合伙企业亏损分担比例，合伙人之间也不能通过协商达成一致。关于合伙企业不能清偿的剩余债务的承担方式，下列表述正确的是（）。"
+    },
+    {
+      "id": 373,
+      "source_id": "710399",
+      "question_number": 8,
+      "knowledge_point_id": 33,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业与第三人关系的规定",
+      "stem": "2023 年6 月，自然人甲、乙、丙设立某合伙企业。合伙协议约定：甲、乙各出资30 万元，丙出资90 万元，均应于合伙企业成立之日起2 年内缴清。合伙协议未约定利润分配事项。2024 年6 月，合伙企业拟分配利润，此时甲、乙已完全履行出资义务，丙已向合伙企业出资60 万元。在甲、乙、丙未能就利润分配方案达成一致意见的情形下，下列关于此次利润应如何分配的表述中"
+    },
+    {
+      "id": 374,
+      "source_id": "710399",
+      "question_number": 9,
+      "knowledge_point_id": 33,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业与第三人关系的规定",
+      "stem": "根据合伙企业法律制度的规定，下列关于普通合伙企业合伙协议规定的利润分配的表述，不符合法律规定的是（ ）。"
+    },
+    {
+      "id": 375,
+      "source_id": "710399",
+      "question_number": 10,
+      "knowledge_point_id": 33,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业与第三人关系的规定",
+      "stem": "根据合伙企业法律制度的规定，下列各项中，属于有限合伙企业合伙协议可以约定的有（）。"
+    },
+    {
+      "id": 376,
+      "source_id": "710399",
+      "question_number": 13,
+      "knowledge_point_id": 32,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业事务执行的规定",
+      "stem": "根据合伙企业法律制度的规定，有限合伙企业的下列事务中，仅需通知其他（或全体）合伙人即可从事的有（）。"
+    },
+    {
+      "id": 377,
+      "source_id": "710399",
+      "question_number": 14,
+      "knowledge_point_id": 32,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业事务执行的规定",
+      "stem": "根据合伙企业法律制度的规定，普通合伙企业的下列事务中，除合伙协议另有约定外，应该经合伙人一致同意的事项有（）。"
+    },
+    {
+      "id": 378,
+      "source_id": "710399",
+      "question_number": 15,
+      "knowledge_point_id": 32,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业事务执行的规定",
+      "stem": "某普通合伙企业举行合伙人会议表决对外投资事项，但合伙协议对该事项的表决办法未作约定。根据合伙企业法律制度的规定，下列关于该事项表决办法的表述中，正确的是（）。"
+    },
+    {
+      "id": 379,
+      "source_id": "710399",
+      "question_number": 17,
+      "knowledge_point_id": 32,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业事务执行的规定",
+      "stem": "甲、乙、丙、丁出资设立某普通合伙企业，各自出资25%。在合伙协议没有约定的情况下，下列合伙人提出的事项中，可以通过的是（ ）。"
+    },
+    {
+      "id": 380,
+      "source_id": "710399",
+      "question_number": 18,
+      "knowledge_point_id": 32,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业事务执行的规定",
+      "stem": "普通合伙人甲、乙、丙、丁分别持有某合伙企业18%、20%、27%和35%的财产份额。合伙协议约定：合伙人对外转让财产份额应当经持有3/5 以上合伙财产份额的合伙人同意。现甲欲将其持有的10%财产份额转让给非合伙人戊，并将剩余8%的财产份额转让给合伙人丙。根据合伙企业法律制度的规定，下列表述中，正确的是（）。"
+    },
+    {
+      "id": 381,
+      "source_id": "710399",
+      "question_number": 19,
+      "knowledge_point_id": 30,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的设立",
+      "stem": "根据合伙企业法律制度的规定，下列企业中，不得成为普通合伙企业合伙人的有（ ）。"
+    },
+    {
+      "id": 382,
+      "source_id": "710399",
+      "question_number": 20,
+      "knowledge_point_id": 30,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的设立",
+      "stem": "根据合伙企业法律制度的规定，下列主体中，可以成为有限合伙企业普通合伙人的是（）。"
+    },
+    {
+      "id": 383,
+      "source_id": "710399",
+      "question_number": 22,
+      "knowledge_point_id": 30,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的设立",
+      "stem": "根据合伙企业法律制度的规定，下列关于普通合伙企业合伙人的表述中，正确的是（）。"
+    },
+    {
+      "id": 384,
+      "source_id": "710399",
+      "question_number": 23,
+      "knowledge_point_id": 30,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的设立",
+      "stem": "甲、乙、丙拟设立一个普通合伙企业，2025 年6 月10 日，三人口头约定合伙协议内容，并明确合伙企业在各合伙人出资后成立。6 月20 日，三人按照前述约定签订书面第三章合伙协议并签名、盖章。6 月30 日，三人按照约定缴纳出资额。7 月5 日，登记机关签发合伙企业营业执照。该合伙企业协议生效的日期为（）。"
+    },
+    {
+      "id": 385,
+      "source_id": "710399",
+      "question_number": 25,
+      "knowledge_point_id": 30,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的设立",
+      "stem": "根据合伙企业法律制度的规定，下列有限合伙人不得用于出资的是（ ）。"
+    },
+    {
+      "id": 386,
+      "source_id": "710399",
+      "question_number": 26,
+      "knowledge_point_id": 30,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的设立",
+      "stem": "赵某、钱某、孙某和李某拟成立甲有限合伙企业，其中孙某为有限合伙人，赵某、钱某、李某为普通合伙人。下列拟采取的出资中，符合规定的有（）。"
+    },
+    {
+      "id": 387,
+      "source_id": "710399",
+      "question_number": 28,
+      "knowledge_point_id": 30,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的设立",
+      "stem": "根据合伙企业法律制度的规定，下列出资形式中，只能由全体合伙人协商确定价值评估办法的是（）。"
+    },
+    {
+      "id": 388,
+      "source_id": "710399",
+      "question_number": 29,
+      "knowledge_point_id": 30,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的设立",
+      "stem": "根据合伙企业法律制度的规定，关于普通合伙企业设立的下列表述中，正确的有（）。第三章"
+    },
+    {
+      "id": 389,
+      "source_id": "710399",
+      "question_number": 31,
+      "knowledge_point_id": 30,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的设立",
+      "stem": "根据合伙企业法律制度的规定，下列选项中，属于合伙企业应当备案的事项是（）。"
+    },
+    {
+      "id": 390,
+      "source_id": "710399",
+      "question_number": 32,
+      "knowledge_point_id": 31,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业财产",
+      "stem": "赵某与钱某出资设立某普通合伙企业，下列属于合伙企业财产的有（）。"
+    },
+    {
+      "id": 391,
+      "source_id": "710399",
+      "question_number": 33,
+      "knowledge_point_id": 31,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业财产",
+      "stem": "根据合伙企业法律制度的规定，下列各项中，不属于合伙企业财产的是（）。"
+    },
+    {
+      "id": 392,
+      "source_id": "710399",
+      "question_number": 35,
+      "knowledge_point_id": 31,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业财产",
+      "stem": "甲普通合伙企业的合伙人孙某将其在合伙企业中的财产份额转让给非合伙人赵某。下列关于赵某取得合伙人资格的时间的表述中，正确的是（）。第三章"
+    },
+    {
+      "id": 393,
+      "source_id": "710399",
+      "question_number": 36,
+      "knowledge_point_id": 31,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业财产",
+      "stem": "2019 年7 月1 日，郑某、丁某、马某分别出资20 000 元设立了普通合伙企业。11 月1 日，郑某拟将自己在合伙企业的财产份额的50%按10 000 元转让，郑某通知丁某、马某后，丁某表示愿意以8 000 元买下，马某未表态。11 月3 日，郑某的好友齐某知道后，愿意以10 000 元购买该份额；马某得知后，随即表示愿以10 000 元购买该份额。该"
+    },
+    {
+      "id": 394,
+      "source_id": "710399",
+      "question_number": 37,
+      "knowledge_point_id": 31,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业财产",
+      "stem": "赵某、钱某、孙某、李某出资设立某普通合伙企业，其中赵某为执行事务合伙人。钱某拟将部分份额转让给孙某，则下列说法正确的是（）。"
+    },
+    {
+      "id": 395,
+      "source_id": "710399",
+      "question_number": 38,
+      "knowledge_point_id": 31,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业财产",
+      "stem": "甲系某普通合伙企业的合伙人，因资金紧张拟向乙借款100 万元。甲以其在该合伙企业的财产份额向乙出质，该出质事宜甲未通知该合伙企业和其他合伙人，乙对甲擅自出质财产份额一事不知情。根据合伙企业法律制度规定，甲以其在合伙企业中的财产份额出质的行为效力属于（）。"
+    },
+    {
+      "id": 396,
+      "source_id": "710399",
+      "question_number": 39,
+      "knowledge_point_id": 31,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业财产",
+      "stem": "甲普通合伙企业（以下简称“甲企业”）的合伙人张某拟以其在甲企业中的财产份额出质。下列关于合伙人财产份额出质的表述中，正确的有（）。"
+    },
+    {
+      "id": 397,
+      "source_id": "710399",
+      "question_number": 41,
+      "knowledge_point_id": 32,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业事务执行的规定",
+      "stem": "合伙企业应当根据合伙人出资比例分配合伙企业事务的执行权利。（"
+    },
+    {
+      "id": 398,
+      "source_id": "710399",
+      "question_number": 42,
+      "knowledge_point_id": 32,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业事务执行的规定",
+      "stem": "根据合伙企业法律制度的规定，下列关于合伙事务执行的表述中，正确的是）。"
+    },
+    {
+      "id": 399,
+      "source_id": "710399",
+      "question_number": 45,
+      "knowledge_point_id": 32,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业事务执行的规定",
+      "stem": "张某、李某和王某三人成立了一家普通合伙企业。合伙协议约定：由张某对外代表合伙企业，执行合伙事务；张某代表合伙企业签订标的额超过50 万元的合同时，应当经过李某和王某的同意。关于该合伙企业执行合伙事务的表述中，正确的有（）。"
+    },
+    {
+      "id": 400,
+      "source_id": "710399",
+      "question_number": 46,
+      "knowledge_point_id": 32,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业事务执行的规定",
+      "stem": "甲为某普通合伙企业的合伙人，该合伙企业经营动感单车销售业务。甲拟再设立一家经营动感单车销售业务的个人独资企业。下列关于甲能否设立该个人独资企业的表述中，符合《合伙企业法》规定的是（）。第三章"
+    },
+    {
+      "id": 401,
+      "source_id": "710399",
+      "question_number": 47,
+      "knowledge_point_id": 32,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业事务执行的规定",
+      "stem": "甲是某普通合伙企业的合伙人，该合伙企业需要购买一批生产用原材料，甲正好有同样一批原材料想要出售，甲在其他合伙人一致同意的情况下，可以进行该笔交易。"
+    },
+    {
+      "id": 402,
+      "source_id": "710399",
+      "question_number": 48,
+      "knowledge_point_id": 32,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业事务执行的规定",
+      "stem": "甲普通合伙企业的合伙人赵某欠个体工商户王某10 万元债务，王某欠甲合伙企业5 万元债务已到期。赵某的债务到期后一直未清偿。根据合伙企业法律制度规定，王某的下列做法中符合法律规定的是（）。"
+    },
+    {
+      "id": 403,
+      "source_id": "710399",
+      "question_number": 49,
+      "knowledge_point_id": 32,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业事务执行的规定",
+      "stem": "甲普通合伙企业（以下简称“甲企业”）的合伙人赵某由于个人原因对李某负有到期债务20 万元，其自有财产不足以清偿该债务。同时李某对甲企业负有到期债务50 万元。下列关于李某债权实现方式的表述中，正确的有（）。"
+    },
+    {
+      "id": 404,
+      "source_id": "710399",
+      "question_number": 50,
+      "knowledge_point_id": 32,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业事务执行的规定",
+      "stem": "甲普通合伙企业（以下简称“甲企业”）的合伙人张某向非合伙人李某借款5 万元，李某欠甲企业8 万元，甲企业尚欠乙公司货款30 万元。下列关于甲企业及其合伙人债务清偿的表述中，正确的是（）。"
+    },
+    {
+      "id": 405,
+      "source_id": "710399",
+      "question_number": 53,
+      "knowledge_point_id": 34,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的入伙与退伙规定",
+      "stem": "根据合伙企业法律制度的规定，下列关于普通合伙企业新合伙人入伙的表述中，正确的有（）。"
+    },
+    {
+      "id": 406,
+      "source_id": "710399",
+      "question_number": 54,
+      "knowledge_point_id": 34,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的入伙与退伙规定",
+      "stem": "合伙协议约定合伙期限的，在合伙企业存续期间内出现特定情形时，合伙人可以退伙。这些情形有（）。"
+    },
+    {
+      "id": 407,
+      "source_id": "710399",
+      "question_number": 55,
+      "knowledge_point_id": 34,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的入伙与退伙规定",
+      "stem": "根据合伙企业法律制度的规定，下列各项中，属于合伙人通知退伙应当满足的条件的有（）。"
+    },
+    {
+      "id": 408,
+      "source_id": "710399",
+      "question_number": 56,
+      "knowledge_point_id": 34,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的入伙与退伙规定",
+      "stem": "根据合伙企业法律制度的规定，普通合伙企业的合伙人发生下列情形中，导致其当然退伙的有（ ）。"
+    },
+    {
+      "id": 409,
+      "source_id": "710399",
+      "question_number": 57,
+      "knowledge_point_id": 34,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的入伙与退伙规定",
+      "stem": "某普通合伙企业的合伙人包括有限责任公司甲、乙，自然人丙、丁。根据合伙企业法律制度的规定，下列情形中，属于当然退伙事由的有（）。"
+    },
+    {
+      "id": 410,
+      "source_id": "710399",
+      "question_number": 59,
+      "knowledge_point_id": 34,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的入伙与退伙规定",
+      "stem": "根据合伙企业法律制度的规定，下列情形中，除合伙协议另有约定外，可以决议将合伙人除名的是（）。"
+    },
+    {
+      "id": 411,
+      "source_id": "710399",
+      "question_number": 60,
+      "knowledge_point_id": 34,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的入伙与退伙规定",
+      "stem": "张某、李某、王某合伙成立普通合伙企业，约定1 年内缴清出资，后王某一直没有缴付出资。2023 年2 月1 日张某和李某通知王某1 个月内补足出资，否则将其予以除名。2023 年3 月1 日张某和李某对王某作出除名决议，2023 年3 月25 日，王某接到除名通知，除名生效时间是（）。"
+    },
+    {
+      "id": 412,
+      "source_id": "710399",
+      "question_number": 61,
+      "knowledge_point_id": 34,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的入伙与退伙规定",
+      "stem": "根据合伙企业法律制度的规定，下列关于合伙人除名的表述中，正确的是）。"
+    },
+    {
+      "id": 413,
+      "source_id": "710399",
+      "question_number": 63,
+      "knowledge_point_id": 34,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "普通合伙企业的入伙与退伙规定",
+      "stem": "某普通合伙企业合伙人甲死亡，其未成年子女乙、丙是其全部合法继承人。根据合伙企业法律制度的规定，下列表述中，正确的是（）。"
+    },
+    {
+      "id": 414,
+      "source_id": "710399",
+      "question_number": 67,
+      "knowledge_point_id": 35,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "特殊的普通合伙企业的规定",
+      "stem": "张某、李某和赵某拟投资设立一家特殊的普通合伙企业，下列拟定的名称中，符合法律规定的是（）。"
+    },
+    {
+      "id": 415,
+      "source_id": "710399",
+      "question_number": 68,
+      "knowledge_point_id": 35,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "特殊的普通合伙企业的规定",
+      "stem": "根据合伙企业法律制度的规定，下列关于特殊的普通合伙企业执业风险防范措施的表述中，正确的有（）。"
+    },
+    {
+      "id": 416,
+      "source_id": "710399",
+      "question_number": 69,
+      "knowledge_point_id": 35,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "特殊的普通合伙企业的规定",
+      "stem": "根据合伙企业法律制度的规定，下列关于特殊的普通合伙企业表述中，正确的是（ ）。"
+    },
+    {
+      "id": 417,
+      "source_id": "710399",
+      "question_number": 72,
+      "knowledge_point_id": 35,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "普通合伙企业",
+      "knowledge_point": "特殊的普通合伙企业的规定",
+      "stem": "甲、乙、丙共同出资设立一个特殊普通合伙企业，甲、乙、丙的出资分别为50 万元、25 万元、25 万元，均已实缴。甲在执业活动中因重大过失造成合伙企业债务，以合伙企业全部财产偿还后，仍有余债100 万元。根据合伙企业法律制度的规定，下列关于该100 万元债务的清偿责任的表述中，正确的是（）。"
+    },
+    {
+      "id": 418,
+      "source_id": "710399",
+      "question_number": 73,
+      "knowledge_point_id": 36,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙企业设立的特殊规定",
+      "stem": "有限合伙企业只剩普通合伙人的，应当解散。（"
+    },
+    {
+      "id": 419,
+      "source_id": "710399",
+      "question_number": 76,
+      "knowledge_point_id": 36,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙企业设立的特殊规定",
+      "stem": "根据合伙企业法律制度的规定，关于有限合伙人未按期足额缴纳出资的法律后果的下列表述中，正确的有（）。"
+    },
+    {
+      "id": 420,
+      "source_id": "710399",
+      "question_number": 79,
+      "knowledge_point_id": 37,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙企业合伙事务执行的特殊规定",
+      "stem": "有限合伙人参与选择承办有限合伙企业审计业务的会计师事务所，视为执行合伙事务。（"
+    },
+    {
+      "id": 421,
+      "source_id": "710399",
+      "question_number": 80,
+      "knowledge_point_id": 37,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙企业合伙事务执行的特殊规定",
+      "stem": "某私募基金的组织形式为有限合伙企业，其有限合伙人陈某的下列行为中，不违反合伙企业法律制度规定的有（）。"
+    },
+    {
+      "id": 422,
+      "source_id": "710399",
+      "question_number": 81,
+      "knowledge_point_id": 37,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙企业合伙事务执行的特殊规定",
+      "stem": "根据合伙企业法律制度的规定，下列有限合伙人的行为中，视为执行合伙企业事务的有（）。"
+    },
+    {
+      "id": 423,
+      "source_id": "710399",
+      "question_number": 82,
+      "knowledge_point_id": 41,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙企业合伙人性质转变的特殊规定",
+      "stem": "甲原来是A 有限合伙企业的普通合伙人，于2023 年1 月1 日转为有限合伙人，合伙企业未就该事项通知其客户乙，原来与乙进行的交易一直由甲在负责，甲转为有限合伙人后又以A 有限合伙企业的名义与乙订立了一个10 万元的合同。有关本案的下列说法正确的有（）。"
+    },
+    {
+      "id": 424,
+      "source_id": "710399",
+      "question_number": 84,
+      "knowledge_point_id": 37,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙企业合伙事务执行的特殊规定",
+      "stem": "根据合伙企业法律制度的规定，关于有限合伙人是否可以与本有限合伙企业交易的下列表述中，正确的是（）。"
+    },
+    {
+      "id": 425,
+      "source_id": "710399",
+      "question_number": 85,
+      "knowledge_point_id": 38,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙人财产份额出质与转让的特殊规定",
+      "stem": "甲为某有限合伙企业的有限合伙人，欲将其财产份额出质。合伙协议对该类事项的批准方式未作约定。下列关于该事项批准方式的表述中，符合合伙企业法律制度规定的是（）。"
+    },
+    {
+      "id": 426,
+      "source_id": "710399",
+      "question_number": 86,
+      "knowledge_point_id": 37,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙企业合伙事务执行的特殊规定",
+      "stem": "甲、乙、丙、丁拟共同投资设立一有限合伙企业，甲、乙为普通合伙人，丙、丁为有限合伙人。四人草拟了一份合伙协议。该合伙协议的下列内容中，符合合伙企业法律制度规定的是（）。"
+    },
+    {
+      "id": 427,
+      "source_id": "710399",
+      "question_number": 88,
+      "knowledge_point_id": 38,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙人财产份额出质与转让的特殊规定",
+      "stem": "根据合伙企业法律制度的规定，在合伙协议没有特别约定的情况下，下列关于有限合伙人对外转让所持合伙企业财产份额的表述中，正确的是（）。"
+    },
+    {
+      "id": 428,
+      "source_id": "710399",
+      "question_number": 90,
+      "knowledge_point_id": 40,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙人入伙与退伙的特殊规定",
+      "stem": "有限合伙人新加入某合伙企业，该有限合伙人认缴出资30 万元，实际缴付20 万元。入伙前合伙企业欠债40 万元，有限合伙人入伙后，合伙企业无力偿还。有限合伙人需要承担的责任是（）。"
+    },
+    {
+      "id": 429,
+      "source_id": "710399",
+      "question_number": 91,
+      "knowledge_point_id": 40,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙人入伙与退伙的特殊规定",
+      "stem": "甲、乙共同设立一普通合伙企业后，丙拟以有限合伙人身份入伙。丁拟以普通合伙人身份入伙。根据合伙企业法律制度的规定，丙、丁入伙后，对其入伙前合伙企业债务承担的表述正确的是（）。"
+    },
+    {
+      "id": 430,
+      "source_id": "710399",
+      "question_number": 92,
+      "knowledge_point_id": 40,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙人入伙与退伙的特殊规定",
+      "stem": "某有限合伙人认缴出资100 万元，实际缴付出资80 万元。其退伙时取回财产70 万元。退伙时合伙企业债务120 万元。则该合伙人对退伙前合伙企业债务应当承担的责任是（ ）。"
+    },
+    {
+      "id": 431,
+      "source_id": "710399",
+      "question_number": 93,
+      "knowledge_point_id": 40,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙人入伙与退伙的特殊规定",
+      "stem": "2020 年10 月，李某、王某共同投资设立了甲有限合伙企业（下称“甲企业”），李某为普通合伙人，出资10 万元；王某为有限合伙人，出资15 万元。2021 年6 月，张某、孟某加入甲企业，其中张某为普通合伙人，孟某为有限合伙人，二人各出资30 万元。同年12 月，甲企业无力清偿欠乙银行的60 万元债务。下列关于该债务承担的表述中，正确的是（）。"
+    },
+    {
+      "id": 432,
+      "source_id": "710399",
+      "question_number": 95,
+      "knowledge_point_id": 41,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙企业合伙人性质转变的特殊规定",
+      "stem": "根据合伙企业法律制度的规定，下列关于合伙人性质转变的表述中，正确的有（）。"
+    },
+    {
+      "id": 433,
+      "source_id": "710399",
+      "question_number": 97,
+      "knowledge_point_id": 41,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙企业合伙人性质转变的特殊规定",
+      "stem": "2022 年3 月，甲、乙、丙、丁成立一有限合伙企业，甲为普通合伙人，乙、丙、丁为有限合伙人。2023 年3 月丙转为普通合伙人，2022 年8 月该合伙企业欠银行30 万元，直至2024 年3 月合伙企业被宣告破产仍未偿还。下列关于甲、乙、丙、丁对30 万元银行债务承担责任的表述中，符合合伙企业法律制度规定的是（）。"
+    },
+    {
+      "id": 434,
+      "source_id": "710399",
+      "question_number": 98,
+      "knowledge_point_id": 41,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "有限合伙企业",
+      "knowledge_point": "有限合伙企业合伙人性质转变的特殊规定",
+      "stem": "2021 年5 月，赵某、钱某、孙某共同出资设立甲有限合伙企业（以下简称“甲企业”），赵某为普通合伙人，出资20 万元，钱某、孙某为有限合伙人，各出资15 万元。2022年，甲企业向银行借款50 万元，该借款于2025 年到期。2024 年，经全体合伙人同意赵某转变为有限合伙人，孙某转变为普通合伙人。2025 年，甲企业无力偿还50 万元到期借款，合伙人就如"
+    },
+    {
+      "id": 435,
+      "source_id": "710399",
+      "question_number": 101,
+      "knowledge_point_id": 42,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "合伙企业的解散和清算",
+      "knowledge_point": "合伙企业的解散和清算的规定",
+      "stem": "根据合伙企业法律制度的规定，发生下列情形，合伙企业应当解散的有（）。"
+    },
+    {
+      "id": 436,
+      "source_id": "710399",
+      "question_number": 102,
+      "knowledge_point_id": 42,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "合伙企业的解散和清算",
+      "knowledge_point": "合伙企业的解散和清算的规定",
+      "stem": "根据合伙企业法律制度的规定，下列关于合伙企业清算人确定的表述中，正确的是（）。清算人"
+    },
+    {
+      "id": 437,
+      "source_id": "710399",
+      "question_number": 103,
+      "knowledge_point_id": 42,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "合伙企业的解散和清算",
+      "knowledge_point": "合伙企业的解散和清算的规定",
+      "stem": "根据合伙企业法律制度的规定，下列各项中，属于合伙企业清算费用的有）。"
+    },
+    {
+      "id": 438,
+      "source_id": "710399",
+      "question_number": 104,
+      "knowledge_point_id": 42,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "合伙企业的解散和清算",
+      "knowledge_point": "合伙企业的解散和清算的规定",
+      "stem": "根据合伙企业法律制度的规定，下列关于合伙企业财产的表述中，正确的是（）。"
+    },
+    {
+      "id": 439,
+      "source_id": "710399",
+      "question_number": 105,
+      "knowledge_point_id": 42,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "合伙企业的解散和清算",
+      "knowledge_point": "合伙企业的解散和清算的规定",
+      "stem": "合伙企业依法被宣告破产的，普通合伙人对合伙企业债务不再承担清偿责任。（"
+    },
+    {
+      "id": 440,
+      "source_id": "710399",
+      "question_number": 106,
+      "knowledge_point_id": 42,
+      "chapter": "合伙企业法律制度",
+      "exam_point": "合伙企业的解散和清算",
+      "knowledge_point": "合伙企业的解散和清算的规定",
+      "stem": "合伙企业注销后，原普通合伙人对合伙企业存续期间的债务承担无限连带责任。（"
+    }
+  ]
+}

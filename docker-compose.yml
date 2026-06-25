@@ -1,9 +1,24 @@
 services:
-  audio-stt-producer:
+  phone-record-server:
     build: .
+    image: phone-record-server:merged
+    container_name: phone-record-server
     ports:
-      - "10083:8000"
+    - 10083:8000      # phone-record STT producer
+    - 18644:18644     # phone-record hermes adapter
+    - 10070:8756      # my-nas-server (mistakegenie)
     env_file:
-      - .env
+    - .env
+    environment:
+      LISTEN_HOST: 0.0.0.0
+      LISTEN_PORT: '18644'
+      UPSTREAM_BASE: http://127.0.0.1:18642
+      MISTAKEGENIE_HOST: 0.0.0.0
+      MISTAKEGENIE_PORT: '8756'
+      DB_PATH: /data/mistakegenie.db
+      MEDIA_DIR: /data/media
+      FRONTEND_DIR: /app/nas_server/frontend_dist
     volumes:
-      - ./shared/output:/app/shared/output
+    - /volume1/openclawdata/fresh-file:/app/shared/output
+    - /volume1/project/my-nas-server/data-vol:/data
+    restart: unless-stopped
