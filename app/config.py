@@ -18,6 +18,12 @@ class Settings(BaseSettings):
     dashscope_poll_timeout_seconds: float = 7200.0
     dashscope_retry_max_attempts: int = 3
     dashscope_retry_base_delay_seconds: float = 5.0
+
+    # 取名（识别后给文件起中文标题）——百炼 OpenAI 兼容接口
+    title_model: str = "qwen-plus"
+    title_base_url: str = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    title_max_chars: int = 8000
+
     # Local default; set SHARED_OUTPUT_DIR=/shared/output when mounting with OpenClaw
     shared_output_dir: Path = Path("shared/output")
     temp_upload_dir: Path = Path(tempfile.gettempdir()) / "audio-stt-uploads"

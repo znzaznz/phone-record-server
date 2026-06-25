@@ -1,3 +1,4 @@
+import json
 import logging
 import shutil
 import uuid
@@ -17,11 +18,13 @@ logging.basicConfig(level=logging.INFO)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     settings.temp_upload_dir.mkdir(parents=True, exist_ok=True)
-    settings.shared_output_dir.mkdir(parents=True, exist_ok=True)
+    (settings.shared_output_dir / "audio").mkdir(parents=True, exist_ok=True)
+    (settings.shared_output_dir / "transcripts").mkdir(parents=True, exist_ok=True)
+    (settings.shared_output_dir / ".tasks").mkdir(parents=True, exist_ok=True)
     yield
 
 
-app = FastAPI(title="Audio STT Producer", version="0.1.0", lifespan=lifespan)
+app = FastAPI(title="Audio STT Producer", version="0.2.0", lifespan=lifespan)
 
 
 @app.get("/health")
@@ -57,8 +60,8 @@ async def transcribe(
         "task_id": str(task_id),
         "status": "accepted",
         "message": (
-            f"Transcription queued; output under shared output: {task_id}.md "
-            f"and source audio {task_id}{suffix}"
+            "Transcription queued; 完成后逐字稿在 transcripts/{日期}_{标题}.md，"
+            "音频在 audio/{日期}_{标题} 同名文件。可轮询 /tasks/{task_id} 查进度与标题。"
         ),
     }
 
@@ -68,6 +71,7 @@ class TaskStatusResponse(BaseModel):
     ready: bool
     audio_saved: bool
     audio_file: str = ""
+    title: str = ""
 
 
 @app.get("/tasks/{task_id}", response_model=TaskStatusResponse)
@@ -76,17 +80,19 @@ def task_status(task_id: str) -> TaskStatusResponse:
         tid = UUID(task_id)
     except ValueError as e:
         raise HTTPException(status_code=400, detail="Invalid task_id") from e
-    out = settings.shared_output_dir
-    md = out / f"{tid}.md"
-    audio_name: str | None = None
-    for suf in ALLOWED_SUFFIXES:
-        p = out / f"{tid}{suf}"
-        if p.is_file():
-            audio_name = p.name
-            break
-    return TaskStatusResponse(
-        task_id=task_id,
-        ready=md.is_file(),
-        audio_saved=audio_name is not None,
-        audio_file=audio_name if audio_name else "",
-    )
+
+    marker = settings.shared_output_dir / ".tasks" / f"{tid}.json"
+    if marker.is_file():
+        try:
+            d = json.loads(marker.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            d = {}
+        return TaskStatusResponse(
+            task_id=task_id,
+            ready=bool(d.get("ready")),
+            audio_saved=bool(d.get("audio_file")),
+            audio_file=str(d.get("audio_file") or ""),
+            title=str(d.get("title") or ""),
+        )
+    # 没有标记 = 还没开始/处理中
+    return TaskStatusResponse(task_id=task_id, ready=False, audio_saved=False)
