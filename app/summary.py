@@ -1,4 +1,10 @@
-"""转写稿 → 类型识别 + 结构化总结（Gemini，仅此项走代理）。"""
+"""转写稿 → 类型识别 + 结构化总结（Gemini 3.5 Flash，仅此项走代理）。
+
+Prompt 结构参考：
+- BrassTranscripts Meeting Summary（可执行信息 > 闲聊）
+- 飞书/讯飞会议纪要（议题/决议/待办三分法）
+- UX 访谈分析（洞察 + 原话引用）
+"""
 
 from __future__ import annotations
 
@@ -10,7 +16,12 @@ import httpx
 from openai import OpenAI
 
 from app.config import settings
-from app.summary_templates import FALLBACK_OUTLINE, FALLBACK_TYPE, TEMPLATES
+from app.summary_templates import (
+    FALLBACK_EXTRA,
+    FALLBACK_OUTLINE,
+    FALLBACK_TYPE,
+    TEMPLATES,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -18,39 +29,45 @@ _JSON_RE = re.compile(r"\{.*\}", re.DOTALL)
 
 
 def _build_system_prompt() -> str:
-    lines = [
-        "你是录音转写稿分析助手。用户会给你一段可能带说话人标记的逐字稿。",
+    type_names = "、".join(list(TEMPLATES) + [FALLBACK_TYPE])
+    return "\n".join([
+        "你是专业的中文录音转写分析助手。输入是语音转文字逐字稿，可能含 Speaker1/说话人 等标记。",
         "",
-        "任务：",
-        "1. 从下列类型中选最匹配的一个（只选一个）："
-        + "、".join(list(TEMPLATES) + [FALLBACK_TYPE]),
-        "2. 严格按该类型的章节结构，写一份中文 markdown 总结",
+        "## 你的任务",
+        f"1. 判断录音类型，从 [{type_names}] 中选最匹配的一个",
+        "2. 按该类型的章节结构输出 markdown 总结",
         "",
-        "类型判定线索：",
-    ]
-    for name, spec in TEMPLATES.items():
-        lines.append(f"- {name}：{spec['hint']}")
-    lines.append(f"- {FALLBACK_TYPE}：以上都不像时使用")
-    lines.append("")
-    lines.append("各类型章节结构（summary 必须按此组织，章节标题保留 ##）：")
-    for name, spec in TEMPLATES.items():
-        lines.append(f"- {name}：{spec['outline'].replace(chr(10), ' / ')}")
-    lines.append(f"- {FALLBACK_TYPE}：{FALLBACK_OUTLINE.replace(chr(10), ' / ')}")
-    lines.extend(
-        [
-            "",
-            "硬性要求：",
-            "- 只依据逐字稿事实，不编造人名、数字、结论",
-            "- 信息不足写「未明确」，不要猜",
-            "- 待办尽量写清 谁/做什么/何时；稿中没有就写「未明确」",
-            "- 简洁、可读，中文",
-            "",
-            "只输出一行 JSON，不要 markdown 代码块，不要其它文字：",
-            '{"type":"会议","summary":"## 议题\\n..."}',
-            "type 必须是上面列出的类型名之一；summary 是完整 markdown 正文。",
-        ]
-    )
-    return "\n".join(lines)
+        "## 类型判定",
+        *[f"- **{n}**：{s['hint']}" for n, s in TEMPLATES.items()],
+        f"- **{FALLBACK_TYPE}**：{FALLBACK_EXTRA}",
+        "",
+        "## 各类型输出结构（summary 必须包含这些 ## 章节）",
+        *(
+            line
+            for n, s in TEMPLATES.items()
+            for line in (
+                f"### {n}",
+                s["outline"],
+                f"写作要求：{s['extra']}" if s.get("extra") else "",
+                "",
+            )
+        ),
+        f"### {FALLBACK_TYPE}",
+        FALLBACK_OUTLINE,
+        "",
+        "## 全局规则",
+        "- 只依据逐字稿，不编造人名、数字、结论、未出现的决策",
+        "- 忽略寒暄、重复、口误和无信息量的填充语",
+        "- 有说话人标记时，待办和决议尽量标注负责人",
+        "- 信息缺失写「未明确」，不要猜测",
+        "- 中文，简洁可读，偏纪要而非散文",
+        "- 待办格式：`- 负责人 / 事项 / 截止时间`",
+        "",
+        "## 输出格式（严格遵守）",
+        "只输出一行 JSON，不要 markdown 代码块，不要其它文字：",
+        '{"type":"会议","summary":"## 会议概览\\n..."}',
+        f"type 必须是 [{type_names}] 之一；summary 是完整 markdown 正文。",
+    ])
 
 
 def _parse_json(text: str) -> dict:
@@ -79,7 +96,7 @@ def _gemini_client() -> OpenAI:
 
 
 def generate_summary(transcript: str, title: str = "") -> tuple[str, str] | None:
-    """返回 (type, summary_md)；失败返回 None，不抛异常。"""
+    """返回 (type, summary_md)；失败返回 None。"""
     if not settings.summary_enabled:
         return None
     if not settings.google_api_key:
@@ -99,7 +116,7 @@ def generate_summary(transcript: str, title: str = "") -> tuple[str, str] | None
                 {"role": "user", "content": user},
             ],
             temperature=0.2,
-            max_tokens=2048,
+            max_tokens=2500,
         )
         raw = (resp.choices[0].message.content or "").strip()
         data = _parse_json(raw)
