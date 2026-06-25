@@ -4,7 +4,6 @@ import shutil
 import uuid
 from contextlib import asynccontextmanager
 from pathlib import Path
-from urllib.parse import quote
 from uuid import UUID
 
 from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
@@ -12,7 +11,6 @@ from fastapi.responses import Response
 from pydantic import BaseModel
 
 from app.config import settings
-from app.docx_export import md_file_to_docx_bytes
 from app.transcription import ALLOWED_SUFFIXES, run_pipeline, validate_audio_filename
 
 logging.basicConfig(level=logging.INFO)
@@ -27,7 +25,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="Audio STT Producer", version="0.3.1", lifespan=lifespan)
+app = FastAPI(title="Audio STT Producer", version="0.3.2", lifespan=lifespan)
 
 
 @app.get("/health")
@@ -96,18 +94,14 @@ def _load_marker(task_id: str) -> dict:
         raise HTTPException(status_code=500, detail="invalid task marker") from e
 
 
-def _docx_response(md_path: Path, download_name: str) -> Response:
+def _md_response(md_path: Path, download_name: str) -> Response:
     if not md_path.is_file():
         raise HTTPException(status_code=404, detail="file not found")
-    try:
-        data = md_file_to_docx_bytes(md_path)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail="docx conversion failed") from e
-    # 下载文件名用纯 ASCII，避免客户端乱码
+    text = md_path.read_text(encoding="utf-8")
     disp = f'attachment; filename="{download_name}"'
     return Response(
-        content=data,
-        media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        content=text.encode("utf-8"),
+        media_type="text/markdown; charset=utf-8",
         headers={"Content-Disposition": disp},
     )
 
@@ -133,8 +127,8 @@ def task_status(task_id: str) -> TaskStatusResponse:
     return TaskStatusResponse(task_id=tid, ready=False, audio_saved=False)
 
 
-@app.get("/download/transcript/{task_id}.docx")
-def download_transcript_docx(task_id: str) -> Response:
+@app.get("/download/transcript/{task_id}.md")
+def download_transcript_md(task_id: str) -> Response:
     tid = _parse_task_id(task_id)
     d = _load_marker(tid)
     rel = str(d.get("transcript") or "").strip()
@@ -142,11 +136,11 @@ def download_transcript_docx(task_id: str) -> Response:
         raise HTTPException(status_code=404, detail="transcript not ready")
     md = settings.shared_output_dir / rel
     short = tid.replace("-", "")[:12]
-    return _docx_response(md, f"transcript_{short}.docx")
+    return _md_response(md, f"transcript_{short}.md")
 
 
-@app.get("/download/summary/{task_id}.docx")
-def download_summary_docx(task_id: str) -> Response:
+@app.get("/download/summary/{task_id}.md")
+def download_summary_md(task_id: str) -> Response:
     tid = _parse_task_id(task_id)
     d = _load_marker(tid)
     rel = str(d.get("summary") or "").strip()
@@ -154,4 +148,4 @@ def download_summary_docx(task_id: str) -> Response:
         raise HTTPException(status_code=404, detail="summary not available")
     md = settings.shared_output_dir / rel
     short = tid.replace("-", "")[:12]
-    return _docx_response(md, f"summary_{short}.docx")
+    return _md_response(md, f"summary_{short}.md")
