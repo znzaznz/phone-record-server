@@ -12,7 +12,7 @@ from fastapi.responses import Response
 from pydantic import BaseModel
 
 from app.config import settings
-from app.docx_export import md_file_to_docx_bytes, validate_stem
+from app.docx_export import md_file_to_docx_bytes
 from app.transcription import ALLOWED_SUFFIXES, run_pipeline, validate_audio_filename
 
 logging.basicConfig(level=logging.INFO)
@@ -27,7 +27,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="Audio STT Producer", version="0.3.0", lifespan=lifespan)
+app = FastAPI(title="Audio STT Producer", version="0.3.1", lifespan=lifespan)
 
 
 @app.get("/health")
@@ -79,29 +79,21 @@ class TaskStatusResponse(BaseModel):
     summary: str = ""
 
 
-@app.get("/tasks/{task_id}", response_model=TaskStatusResponse)
-def task_status(task_id: str) -> TaskStatusResponse:
+def _parse_task_id(task_id: str) -> str:
     try:
-        tid = UUID(task_id)
+        return str(UUID(task_id.strip()))
     except ValueError as e:
         raise HTTPException(status_code=400, detail="Invalid task_id") from e
 
-    marker = settings.shared_output_dir / ".tasks" / f"{tid}.json"
-    if marker.is_file():
-        try:
-            d = json.loads(marker.read_text(encoding="utf-8"))
-        except (OSError, ValueError):
-            d = {}
-        return TaskStatusResponse(
-            task_id=task_id,
-            ready=bool(d.get("ready")),
-            audio_saved=bool(d.get("audio_file")),
-            audio_file=str(d.get("audio_file") or ""),
-            title=str(d.get("title") or ""),
-            transcript=str(d.get("transcript") or ""),
-            summary=str(d.get("summary") or ""),
-        )
-    return TaskStatusResponse(task_id=task_id, ready=False, audio_saved=False)
+
+def _load_marker(task_id: str) -> dict:
+    marker = settings.shared_output_dir / ".tasks" / f"{task_id}.json"
+    if not marker.is_file():
+        raise HTTPException(status_code=404, detail="task not found")
+    try:
+        return json.loads(marker.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        raise HTTPException(status_code=500, detail="invalid task marker") from e
 
 
 def _docx_response(md_path: Path, download_name: str) -> Response:
@@ -111,8 +103,8 @@ def _docx_response(md_path: Path, download_name: str) -> Response:
         data = md_file_to_docx_bytes(md_path)
     except Exception as e:
         raise HTTPException(status_code=500, detail="docx conversion failed") from e
-    # filename 可能含中文，用 RFC 5987 避免 latin-1 报错
-    disp = f"attachment; filename*=UTF-8''{quote(download_name)}"
+    # 下载文件名用纯 ASCII，避免客户端乱码
+    disp = f'attachment; filename="{download_name}"'
     return Response(
         content=data,
         media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -120,21 +112,46 @@ def _docx_response(md_path: Path, download_name: str) -> Response:
     )
 
 
-@app.get("/download/transcript/{stem}.docx")
-def download_transcript_docx(stem: str) -> Response:
-    try:
-        stem = validate_stem(stem)
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e)) from e
-    md = settings.shared_output_dir / "transcripts" / f"{stem}.md"
-    return _docx_response(md, f"{stem}_原稿.docx")
+@app.get("/tasks/{task_id}", response_model=TaskStatusResponse)
+def task_status(task_id: str) -> TaskStatusResponse:
+    tid = _parse_task_id(task_id)
+    marker = settings.shared_output_dir / ".tasks" / f"{tid}.json"
+    if marker.is_file():
+        try:
+            d = json.loads(marker.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            d = {}
+        return TaskStatusResponse(
+            task_id=tid,
+            ready=bool(d.get("ready")),
+            audio_saved=bool(d.get("audio_file")),
+            audio_file=str(d.get("audio_file") or ""),
+            title=str(d.get("title") or ""),
+            transcript=str(d.get("transcript") or ""),
+            summary=str(d.get("summary") or ""),
+        )
+    return TaskStatusResponse(task_id=tid, ready=False, audio_saved=False)
 
 
-@app.get("/download/summary/{stem}.docx")
-def download_summary_docx(stem: str) -> Response:
-    try:
-        stem = validate_stem(stem)
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e)) from e
-    md = settings.shared_output_dir / "summaries" / f"{stem}.md"
-    return _docx_response(md, f"{stem}_总结.docx")
+@app.get("/download/transcript/{task_id}.docx")
+def download_transcript_docx(task_id: str) -> Response:
+    tid = _parse_task_id(task_id)
+    d = _load_marker(tid)
+    rel = str(d.get("transcript") or "").strip()
+    if not rel:
+        raise HTTPException(status_code=404, detail="transcript not ready")
+    md = settings.shared_output_dir / rel
+    short = tid.replace("-", "")[:12]
+    return _docx_response(md, f"transcript_{short}.docx")
+
+
+@app.get("/download/summary/{task_id}.docx")
+def download_summary_docx(task_id: str) -> Response:
+    tid = _parse_task_id(task_id)
+    d = _load_marker(tid)
+    rel = str(d.get("summary") or "").strip()
+    if not rel:
+        raise HTTPException(status_code=404, detail="summary not available")
+    md = settings.shared_output_dir / rel
+    short = tid.replace("-", "")[:12]
+    return _docx_response(md, f"summary_{short}.docx")
