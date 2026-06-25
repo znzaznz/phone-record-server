@@ -4,12 +4,15 @@ import shutil
 import uuid
 from contextlib import asynccontextmanager
 from pathlib import Path
+from urllib.parse import quote
 from uuid import UUID
 
 from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
+from fastapi.responses import Response
 from pydantic import BaseModel
 
 from app.config import settings
+from app.docx_export import md_file_to_docx_bytes, validate_stem
 from app.transcription import ALLOWED_SUFFIXES, run_pipeline, validate_audio_filename
 
 logging.basicConfig(level=logging.INFO)
@@ -18,13 +21,13 @@ logging.basicConfig(level=logging.INFO)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     settings.temp_upload_dir.mkdir(parents=True, exist_ok=True)
-    (settings.shared_output_dir / "audio").mkdir(parents=True, exist_ok=True)
-    (settings.shared_output_dir / "transcripts").mkdir(parents=True, exist_ok=True)
-    (settings.shared_output_dir / ".tasks").mkdir(parents=True, exist_ok=True)
+    out = settings.shared_output_dir
+    for sub in ("audio", "transcripts", "summaries", ".tasks"):
+        (out / sub).mkdir(parents=True, exist_ok=True)
     yield
 
 
-app = FastAPI(title="Audio STT Producer", version="0.2.0", lifespan=lifespan)
+app = FastAPI(title="Audio STT Producer", version="0.3.0", lifespan=lifespan)
 
 
 @app.get("/health")
@@ -60,8 +63,8 @@ async def transcribe(
         "task_id": str(task_id),
         "status": "accepted",
         "message": (
-            "Transcription queued; 完成后逐字稿在 transcripts/{日期}_{标题}.md，"
-            "音频在 audio/{日期}_{标题} 同名文件。可轮询 /tasks/{task_id} 查进度与标题。"
+            "Transcription queued; 完成后逐字稿在 transcripts/，总结在 summaries/。"
+            "可轮询 /tasks/{task_id} 查进度。"
         ),
     }
 
@@ -72,6 +75,8 @@ class TaskStatusResponse(BaseModel):
     audio_saved: bool
     audio_file: str = ""
     title: str = ""
+    transcript: str = ""
+    summary: str = ""
 
 
 @app.get("/tasks/{task_id}", response_model=TaskStatusResponse)
@@ -93,6 +98,43 @@ def task_status(task_id: str) -> TaskStatusResponse:
             audio_saved=bool(d.get("audio_file")),
             audio_file=str(d.get("audio_file") or ""),
             title=str(d.get("title") or ""),
+            transcript=str(d.get("transcript") or ""),
+            summary=str(d.get("summary") or ""),
         )
-    # 没有标记 = 还没开始/处理中
     return TaskStatusResponse(task_id=task_id, ready=False, audio_saved=False)
+
+
+def _docx_response(md_path: Path, download_name: str) -> Response:
+    if not md_path.is_file():
+        raise HTTPException(status_code=404, detail="file not found")
+    try:
+        data = md_file_to_docx_bytes(md_path)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="docx conversion failed") from e
+    # filename 可能含中文，用 RFC 5987 避免 latin-1 报错
+    disp = f"attachment; filename*=UTF-8''{quote(download_name)}"
+    return Response(
+        content=data,
+        media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        headers={"Content-Disposition": disp},
+    )
+
+
+@app.get("/download/transcript/{stem}.docx")
+def download_transcript_docx(stem: str) -> Response:
+    try:
+        stem = validate_stem(stem)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e)) from e
+    md = settings.shared_output_dir / "transcripts" / f"{stem}.md"
+    return _docx_response(md, f"{stem}_原稿.docx")
+
+
+@app.get("/download/summary/{stem}.docx")
+def download_summary_docx(stem: str) -> Response:
+    try:
+        stem = validate_stem(stem)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e)) from e
+    md = settings.shared_output_dir / "summaries" / f"{stem}.md"
+    return _docx_response(md, f"{stem}_总结.docx")

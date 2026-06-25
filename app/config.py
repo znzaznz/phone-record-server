@@ -31,6 +31,8 @@ class Settings(BaseSettings):
     summary_proxy_url: str = "http://192.168.31.9:7890"
     summary_max_chars: int = 24000
 
+    public_base_url: str = "http://192.168.31.9:10083"
+
     shared_output_dir: Path = Path("shared/output")
     temp_upload_dir: Path = Path(tempfile.gettempdir()) / "audio-stt-uploads"
 
