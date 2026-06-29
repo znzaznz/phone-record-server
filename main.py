@@ -6,12 +6,13 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 from uuid import UUID
 
-from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
+from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile, WebSocket
 from fastapi.responses import Response
 from pydantic import BaseModel
 
 from app.config import settings
 from app.transcription import ALLOWED_SUFFIXES, run_pipeline, validate_audio_filename
+from app.remote_relay import remote_relay
 
 logging.basicConfig(level=logging.INFO)
 
@@ -31,6 +32,22 @@ app = FastAPI(title="Audio STT Producer", version="0.3.2", lifespan=lifespan)
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}
+
+
+@app.websocket("/remote/ws")
+async def remote_agent_ws(
+    websocket: WebSocket,
+    token: str = "",
+    role: str = "",
+    device_id: str = "",
+) -> None:
+    await remote_relay.connect(
+        websocket,
+        expected_token=settings.remote_agent_token,
+        token=token,
+        role=role,
+        device_id=device_id,
+    )
 
 
 @app.post("/transcribe")

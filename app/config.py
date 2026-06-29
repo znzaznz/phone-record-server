@@ -36,5 +36,8 @@ class Settings(BaseSettings):
     shared_output_dir: Path = Path("shared/output")
     temp_upload_dir: Path = Path(tempfile.gettempdir()) / "audio-stt-uploads"
 
+    # Issue 01: single shared token for the phone <-> computer relay.
+    remote_agent_token: str = ""
+
 
 settings = Settings()
