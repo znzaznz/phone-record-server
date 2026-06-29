@@ -38,6 +38,7 @@ class Settings(BaseSettings):
 
     # Issue 01: single shared token for the phone <-> computer relay.
     remote_agent_token: str = ""
+    remote_agent_db_path: Path = Path("shared/output/remote-agent.sqlite3")
 
 
 settings = Settings()

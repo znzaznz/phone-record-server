@@ -23,6 +23,7 @@ async def lifespan(app: FastAPI):
     out = settings.shared_output_dir
     for sub in ("audio", "transcripts", "summaries", ".tasks"):
         (out / sub).mkdir(parents=True, exist_ok=True)
+    remote_relay.initialize(settings.remote_agent_db_path)
     yield
 
 
