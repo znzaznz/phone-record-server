@@ -19,6 +19,6 @@ services:
       MEDIA_DIR: /data/media
       FRONTEND_DIR: /app/nas_server/frontend_dist
     volumes:
-    - /volume1/openclawdata/fresh-file:/app/shared/output
+    - /volume1/hermas/data/phone-transcripts:/app/shared/output
     - /volume1/project/my-nas-server/data-vol:/data
     restart: unless-stopped
