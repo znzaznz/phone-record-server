@@ -36,8 +36,13 @@ class Settings(BaseSettings):
     shared_output_dir: Path = Path("shared/output")
     temp_upload_dir: Path = Path(tempfile.gettempdir()) / "audio-stt-uploads"
 
-    # Issue 01: single shared token for the phone <-> computer relay.
-    remote_agent_token: str = ""
+    # Issue 03: per-device relay credentials and phone -> computer pairings.
+    # A file is preferred because it can be edited to revoke a device without
+    # restarting the relay. JSON is convenient for container environment setup.
+    remote_agent_auth_config_path: str = ""
+    remote_agent_auth_config_json: str = ""
+    remote_agent_allow_insecure_localhost: bool = False
+    remote_agent_trust_forwarded_proto: bool = False
     remote_agent_db_path: Path = Path("shared/output/remote-agent.sqlite3")
 
 

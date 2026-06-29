@@ -2,11 +2,97 @@ import asyncio
 import hmac
 import json
 import sqlite3
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 from fastapi import WebSocket, WebSocketDisconnect, status
+
+
+@dataclass(frozen=True)
+class DeviceCredential:
+    role: str
+    token: str
+    revoked: bool = False
+
+
+class DeviceAuthPolicy:
+    """Reloadable per-device credentials and phone/computer pairing policy."""
+
+    def __init__(self, *, config_path: str = "", config_json: str = "") -> None:
+        if config_path and config_json:
+            raise ValueError(
+                "set only one of REMOTE_AGENT_AUTH_CONFIG_PATH or "
+                "REMOTE_AGENT_AUTH_CONFIG_JSON"
+            )
+        self.config_path = Path(config_path).expanduser() if config_path else None
+        self.config_json = config_json
+        # Validate configured input at startup. No config is allowed but denies all.
+        self._load()
+
+    def _load(self) -> tuple[dict[str, DeviceCredential], dict[str, set[str]]]:
+        if self.config_path is not None:
+            raw = self.config_path.read_text(encoding="utf-8")
+        elif self.config_json:
+            raw = self.config_json
+        else:
+            return {}, {}
+        document = json.loads(raw)
+        if not isinstance(document, dict):
+            raise ValueError("auth config root must be an object")
+        raw_devices = document.get("devices")
+        raw_pairings = document.get("pairings")
+        if not isinstance(raw_devices, dict) or not isinstance(raw_pairings, dict):
+            raise ValueError("auth config requires object fields: devices and pairings")
+
+        devices: dict[str, DeviceCredential] = {}
+        tokens: set[str] = set()
+        for device_id, value in raw_devices.items():
+            if not isinstance(device_id, str) or not device_id or not isinstance(value, dict):
+                raise ValueError("every device must have a non-empty string id and object value")
+            role = value.get("role")
+            token = value.get("token")
+            if role not in {"phone", "computer"} or not isinstance(token, str) or not token:
+                raise ValueError(f"device {device_id!r} requires role and non-empty token")
+            if token in tokens:
+                raise ValueError("device tokens must be unique")
+            tokens.add(token)
+            devices[device_id] = DeviceCredential(
+                role=role, token=token, revoked=value.get("revoked") is True
+            )
+
+        pairings: dict[str, set[str]] = {}
+        for phone_id, computer_ids in raw_pairings.items():
+            if not isinstance(phone_id, str) or not isinstance(computer_ids, list):
+                raise ValueError("pairings must map phone ids to computer id arrays")
+            if phone_id not in devices or devices[phone_id].role != "phone":
+                raise ValueError(f"pairing source {phone_id!r} is not a configured phone")
+            targets = {str(item) for item in computer_ids}
+            if any(item not in devices or devices[item].role != "computer" for item in targets):
+                raise ValueError(f"pairing {phone_id!r} contains an unknown computer")
+            pairings[phone_id] = targets
+        return devices, pairings
+
+    def authorize(self, device_id: str, role: str, token: str) -> bool:
+        try:
+            devices, _ = self._load()
+        except (OSError, ValueError):
+            return False
+        credential = devices.get(device_id)
+        return bool(
+            credential
+            and not credential.revoked
+            and credential.role == role
+            and hmac.compare_digest(token, credential.token)
+        )
+
+    def paired(self, phone_id: str, computer_id: str) -> bool:
+        try:
+            _, pairings = self._load()
+        except (OSError, ValueError):
+            return False
+        return computer_id in pairings.get(phone_id, set())
 
 
 class RelayEventStore:
@@ -40,6 +126,17 @@ class RelayEventStore:
                 );
                 CREATE INDEX IF NOT EXISTS events_session_seq
                     ON events(computer_id, session_id, seq);
+                CREATE TABLE IF NOT EXISTS audit_log (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    created_at TEXT NOT NULL,
+                    device_id TEXT NOT NULL,
+                    computer_id TEXT NOT NULL DEFAULT '',
+                    event_type TEXT NOT NULL,
+                    outcome TEXT NOT NULL,
+                    summary TEXT NOT NULL DEFAULT ''
+                );
+                CREATE INDEX IF NOT EXISTS audit_created_at
+                    ON audit_log(created_at);
                 """
             )
 
@@ -128,6 +225,33 @@ class RelayEventStore:
             ).fetchone()
         return dict(row) if row else None
 
+    def audit(
+        self,
+        *,
+        device_id: str,
+        computer_id: str = "",
+        event_type: str,
+        outcome: str,
+        summary: str = "",
+    ) -> None:
+        now = datetime.now(timezone.utc).isoformat()
+        with self._connect() as db:
+            db.execute(
+                """INSERT INTO audit_log
+                   (created_at, device_id, computer_id, event_type, outcome, summary)
+                   VALUES (?, ?, ?, ?, ?, ?)""",
+                (now, device_id, computer_id, event_type, outcome, summary),
+            )
+
+    def audit_entries(self) -> list[dict[str, Any]]:
+        with self._connect() as db:
+            db.row_factory = sqlite3.Row
+            rows = db.execute(
+                """SELECT created_at, device_id, computer_id, event_type,
+                          outcome, summary FROM audit_log ORDER BY id"""
+            ).fetchall()
+        return [dict(row) for row in rows]
+
 
 class RemoteRelay:
     """Authenticated relay plus durable per-session replay log."""
@@ -137,10 +261,20 @@ class RemoteRelay:
         self._phones: dict[str, WebSocket] = {}
         self._lock = asyncio.Lock()
         self._store: RelayEventStore | None = None
+        self._auth = DeviceAuthPolicy()
 
-    def initialize(self, database_path: Path) -> None:
+    def initialize(
+        self,
+        database_path: Path,
+        *,
+        auth_config_path: str = "",
+        auth_config_json: str = "",
+    ) -> None:
         if self._store is None or self._store.path != database_path:
             self._store = RelayEventStore(database_path)
+        self._auth = DeviceAuthPolicy(
+            config_path=auth_config_path, config_json=auth_config_json
+        )
 
     @property
     def store(self) -> RelayEventStore:
@@ -152,19 +286,30 @@ class RemoteRelay:
         self,
         websocket: WebSocket,
         *,
-        expected_token: str,
         token: str,
         role: str,
         device_id: str,
     ) -> None:
-        if not expected_token or not hmac.compare_digest(token, expected_token):
+        if role not in {"phone", "computer"} or not device_id:
             await websocket.close(code=status.WS_1008_POLICY_VIOLATION)
             return
-        if role not in {"phone", "computer"} or not device_id:
+        if not self._auth.authorize(device_id, role, token):
+            self.store.audit(
+                device_id=device_id,
+                event_type="connect",
+                outcome="denied",
+                summary=f"role={role}",
+            )
             await websocket.close(code=status.WS_1008_POLICY_VIOLATION)
             return
 
         await websocket.accept()
+        self.store.audit(
+            device_id=device_id,
+            event_type="connect",
+            outcome="allowed",
+            summary=f"role={role}",
+        )
         peers = self._phones if role == "phone" else self._computers
         async with self._lock:
             old = peers.get(device_id)
@@ -176,12 +321,30 @@ class RemoteRelay:
             await websocket.send_json(
                 {"type": "registered", "role": role, "device_id": device_id}
             )
+            receive_task = asyncio.create_task(websocket.receive_json())
             while True:
-                message = await websocket.receive_json()
+                done, _ = await asyncio.wait({receive_task}, timeout=0.5)
+                if not self._auth.authorize(device_id, role, token):
+                    self.store.audit(
+                        device_id=device_id,
+                        event_type="revocation",
+                        outcome="disconnected",
+                        summary=f"role={role}",
+                    )
+                    receive_task.cancel()
+                    await asyncio.gather(receive_task, return_exceptions=True)
+                    await websocket.close(
+                        code=status.WS_1008_POLICY_VIOLATION, reason="device_revoked"
+                    )
+                    return
+                if not done:
+                    continue
+                message = receive_task.result()
                 if role == "phone":
                     await self._from_phone(websocket, device_id, message)
                 else:
-                    await self._from_computer(device_id, message)
+                    await self._from_computer(websocket, device_id, message)
+                receive_task = asyncio.create_task(websocket.receive_json())
         except (WebSocketDisconnect, RuntimeError):
             pass
         finally:
@@ -194,6 +357,25 @@ class RemoteRelay:
     ) -> None:
         target = str(message.get("target") or "")
         kind = message.get("type")
+        if not self._auth.paired(device_id, target):
+            self.store.audit(
+                device_id=device_id,
+                computer_id=target,
+                event_type=str(kind or "unknown"),
+                outcome="denied_unpaired",
+                summary=self._message_summary(message),
+            )
+            await websocket.send_json(
+                {"type": "relay_error", "error": "not_paired", "target": target}
+            )
+            return
+        self.store.audit(
+            device_id=device_id,
+            computer_id=target,
+            event_type=str(kind or "unknown"),
+            outcome="allowed",
+            summary=self._message_summary(message),
+        )
         if kind == "list_sessions":
             async with self._lock:
                 await websocket.send_json(
@@ -248,9 +430,29 @@ class RemoteRelay:
                 )
 
     async def _from_computer(
-        self, device_id: str, message: dict[str, Any]
+        self, websocket: WebSocket, device_id: str, message: dict[str, Any]
     ) -> None:
         target = str(message.get("target") or "")
+        kind = str(message.get("type") or "unknown")
+        if not self._auth.paired(target, device_id):
+            self.store.audit(
+                device_id=target,
+                computer_id=device_id,
+                event_type=kind,
+                outcome="denied_unpaired",
+                summary=self._message_summary(message),
+            )
+            await websocket.send_json(
+                {"type": "relay_error", "error": "not_paired", "target": target}
+            )
+            return
+        self.store.audit(
+            device_id=target,
+            computer_id=device_id,
+            event_type=kind,
+            outcome="allowed",
+            summary=self._message_summary(message),
+        )
         forwarded = {**message, "source": device_id}
         async with self._lock:
             if message.get("session_id") and message.get("seq") is not None:
@@ -265,6 +467,19 @@ class RemoteRelay:
                     # A phone disappearing must never tear down the computer socket.
                     if self._phones.get(target) is destination:
                         self._phones.pop(target, None)
+
+    @staticmethod
+    def _message_summary(message: dict[str, Any]) -> str:
+        fields = []
+        for key in ("session_id", "workspace", "status", "engine", "name"):
+            value = message.get(key)
+            if value not in (None, ""):
+                fields.append(f"{key}={value}")
+        detail = message.get("prompt") or message.get("message") or message.get("content")
+        if detail not in (None, ""):
+            text = str(detail).replace("\r", " ").replace("\n", " ")[:160]
+            fields.append(f"detail={text}")
+        return "; ".join(fields)[:500]
 
 
 remote_relay = RemoteRelay()

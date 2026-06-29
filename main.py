@@ -23,7 +23,11 @@ async def lifespan(app: FastAPI):
     out = settings.shared_output_dir
     for sub in ("audio", "transcripts", "summaries", ".tasks"):
         (out / sub).mkdir(parents=True, exist_ok=True)
-    remote_relay.initialize(settings.remote_agent_db_path)
+    remote_relay.initialize(
+        settings.remote_agent_db_path,
+        auth_config_path=settings.remote_agent_auth_config_path,
+        auth_config_json=settings.remote_agent_auth_config_json,
+    )
     yield
 
 
@@ -42,9 +46,23 @@ async def remote_agent_ws(
     role: str = "",
     device_id: str = "",
 ) -> None:
+    forwarded_proto = websocket.headers.get("x-forwarded-proto", "").split(",")[0].strip()
+    secure = websocket.url.scheme == "wss" or (
+        settings.remote_agent_trust_forwarded_proto
+        and forwarded_proto in {"https", "wss"}
+    )
+    local_host = (websocket.url.hostname or "").lower() in {
+        "127.0.0.1",
+        "localhost",
+        "::1",
+    }
+    if not secure and not (
+        settings.remote_agent_allow_insecure_localhost and local_host
+    ):
+        await websocket.close(code=1008, reason="wss_required")
+        return
     await remote_relay.connect(
         websocket,
-        expected_token=settings.remote_agent_token,
         token=token,
         role=role,
         device_id=device_id,

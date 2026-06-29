@@ -1,0 +1,28 @@
+{
+  "devices": {
+    "phone-1": {
+      "role": "phone",
+      "token": "replace-with-a-random-phone-1-token",
+      "revoked": false
+    },
+    "phone-2": {
+      "role": "phone",
+      "token": "replace-with-a-different-random-phone-2-token",
+      "revoked": false
+    },
+    "home-pc": {
+      "role": "computer",
+      "token": "replace-with-a-different-random-home-pc-token",
+      "revoked": false
+    },
+    "office-pc": {
+      "role": "computer",
+      "token": "replace-with-a-third-random-office-pc-token",
+      "revoked": false
+    }
+  },
+  "pairings": {
+    "phone-1": ["home-pc"],
+    "phone-2": ["office-pc"]
+  }
+}
